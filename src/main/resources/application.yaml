@@ -1,4 +1,6 @@
-
+database:
+  location: 192.168.31.22 #localhost
+  
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -6,8 +8,8 @@ spring:
     max-idle: 10
     max-wait: 10000
     min-idle: 5
+    url: jdbc:mysql://${database.location}:3306/boen_qms
     #    url: jdbc:mysql://192.168.1.24:3306/df_demo
-    url: jdbc:mysql://localhost:3306/boen_qms
     #    url: jdbc:mysql://192.168.15.6:3306/df_demo_04
     username: root
     #    password: heshan8386
@@ -18,18 +20,18 @@ spring:
   application:
     name: HB-QMS-Provider
   activemq:
-    broker-url: tcp://localhost:61616  #你activeMQ的ip和端口号
+    broker-url: tcp://${database.location}:61616  #你activeMQ的ip和端口号
     user: admin   #activeMq账号
     password: admin #activeMq密码
     #    queue-name: Status_Iot_Machines_J10-1_J10-1-4 #队列名
     queue-name: Report_ProductGague_J10-1_J10-1-4	 #队列名
-    failover: (tcp://localhost:61616,tcp://localhost:61616,tcp://localhost:61616,tcp://localhost:61616,tcp://localhost:61617)
+    failover: (tcp://${database.location}:61616,tcp://${database.location}:61616,tcp://${database.location}:61616,tcp://${database.location}:61616,tcp://${database.location}:61617)
     #    failover: (tcp://localhost:61616?wireFormat.maxInactivityDuration=0)&maxReconnectDelay=100&maxReconnectAttempts=1&timeout=2000
     pool:
       enabled: true       #连接池启动
       max-connections: 100 #最大连接数
   jtmq:
-    broker-url: tcp://localhost:61616  #你activeMQ的ip和端口号
+    broker-url: tcp://${database.location}:61616  #你activeMQ的ip和端口号
     user: admin   #activeMq账号
     password: admin #activeMq密码
     #    queue-name: Status_Iot_Machines_J10-1_J10-1-4 #队列名
