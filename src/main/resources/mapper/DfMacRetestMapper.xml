@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacRetestMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacRetest">
+        <id column="id" property="id" />
+        <result column="machine_code" property="machineCode" />
+        <result column="retest_result" property="retestResult" />
+        <result column="create_time" property="createTime" />
+        <result column="response_time" property="responseTime" />
+        <result column="factory" property="factory" />
+        <result column="project" property="project" />
+        <result column="linebody" property="linebody" />
+        <result column="process" property="process" />
+        <result column="day_or_night" property="dayOrNight" />
+        <result column="test_type" property="testType" />
+    </resultMap>
+
+</mapper>

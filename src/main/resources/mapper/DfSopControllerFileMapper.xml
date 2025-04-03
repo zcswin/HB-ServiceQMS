@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSopControllerFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSopControllerFile">
+        <id column="id" property="id" />
+        <result column="project" property="project" />
+        <result column="change_type" property="changeType" />
+        <result column="apply_model" property="applyModel" />
+        <result column="occasion_applicable" property="occasionApplicable" />
+        <result column="file_name" property="fileName" />
+        <result column="file_type" property="fileType" />
+        <result column="version" property="version" />
+        <result column="making_derpartment" property="makingDerpartment" />
+        <result column="document_maker" property="documentMaker" />
+        <result column="release_date" property="releaseDate" />
+        <result column="file_upload" property="fileUpload" />
+        <result column="confirmor" property="confirmor" />
+        <result column="registration_time" property="registrationTime" />
+        <result column="factory_name" property="factoryName" />
+        <result column="factory_code" property="factoryCode" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

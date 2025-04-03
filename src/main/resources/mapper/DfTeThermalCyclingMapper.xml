@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTeThermalCyclingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTeThermalCycling">
+        <id column="id" property="id" />
+        <result column="QRcode" property="QRcode" />
+        <result column="SN" property="sn" />
+        <result column="Location" property="Location" />
+        <result column="Pre_L" property="preL" />
+        <result column="Pre_a" property="preA" />
+        <result column="Pre_b" property="preB" />
+        <result column="Post_L" property="postL" />
+        <result column="Post_a" property="postA" />
+        <result column="Post_b" property="postB" />
+        <result column="Shift_L" property="shiftL" />
+        <result column="Shift_a" property="shiftA" />
+        <result column="Shift_b" property="shiftB" />
+        <result column="Shift_E94" property="shiftE94" />
+        <result column="result" property="result" />
+        <result column="submit_time" property="submitTime" />
+    </resultMap>
+
+</mapper>

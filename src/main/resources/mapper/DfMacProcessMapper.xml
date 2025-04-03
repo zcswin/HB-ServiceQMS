@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacProcessMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacProcess">
+        <id column="id" property="id" />
+        <result column="Type_Data" property="typeData" />
+        <result column="MachineCode" property="MachineCode" />
+        <result column="file_prog_main" property="fileProgMain" />
+        <result column="num_prog_main" property="numProgMain" />
+        <result column="file_prog_sub" property="fileProgSub" />
+        <result column="num_prog_sub" property="numProgSub" />
+        <result column="pub_time" property="pubTime" />
+    </resultMap>
+
+</mapper>

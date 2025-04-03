@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQoaBomSonMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQoaBomSon">
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="acknowledging_time" property="acknowledgingTime" />
+        <result column="brawing_file" property="brawingFile" />
+        <result column="dfm_file" property="dfmFile" />
+        <result column="external_qcp" property="externalQcp" />
+        <result column="interior_qcp" property="interiorQcp" />
+        <result column="material_bom" property="materialBom" />
+        <result column="ers_file" property="ersFile" />
+        <result column="mil_file" property="milFile" />
+        <result column="factory_approval" property="factoryApproval" />
+        <result column="production_order" property="productionOrder" />
+        <result column="first_report" property="firstReport" />
+        <result column="file_storage_location" property="fileStorageLocation" />
+        <result column="upload_path" property="uploadPath" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

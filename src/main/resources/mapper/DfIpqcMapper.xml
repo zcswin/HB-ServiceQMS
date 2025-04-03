@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfIpqcMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfIpqc">
+        <id column="id" property="id" />
+        <result column="factory_id" property="factoryId" />
+        <result column="procedure_id" property="procedureId" />
+        <result column="model_id" property="modelId" />
+        <result column="problem_id" property="problemId" />
+        <result column="problem_detial" property="problemDetial" />
+        <result column="affect_machine_num" property="affectMachineNum" />
+        <result column="handing_option" property="handingOption" />
+        <result column="initiate_man" property="initiateMan" />
+        <result column="liable_man" property="liableMan" />
+        <result column="event_level" property="eventLevel" />
+        <result column="occurrence_time" property="occurrenceTime" />
+        <result column="solution_time" property="solutionTime" />
+        <result column="lines_time" property="linesTime" />
+        <result column="received_time" property="receivedTime" />
+        <result column="result" property="result" />
+        <result column="timeout_duration" property="timeoutDuration" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="close" property="close" />
+    </resultMap>
+
+</mapper>

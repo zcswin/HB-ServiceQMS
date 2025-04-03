@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfGroupMacNgRateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfGroupMacNgRate">
+        <id column="id" property="id" />
+        <result column="group_id" property="groupId" />
+        <result column="machine_code" property="machineCode" />
+        <result column="check_ng_num" property="checkNgNum" />
+        <result column="check_all_num" property="checkAllNum" />
+        <result column="check_ng_rate" property="checkNgRate" />
+        <result column="inthe_time" property="intheTime" />
+        <result column="test_time" property="testTime" />
+        <result column="create_time" property="createTime" />
+        <result column="factory" property="factory" />
+        <result column="process" property="process" />
+        <result column="project" property="project" />
+        <result column="linebody" property="linebody" />
+        <result column="test_type" property="testType" />
+        <result column="day_or_night" property="dayOrNight" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfIsmCheckItemInfosMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfIsmCheckItemInfos">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="check_time" property="checkTime" />
+        <result column="row_id" property="rowId" />
+        <result column="position" property="position" />
+        <result column="result" property="result" />
+        <result column="private_mark" property="privateMark" />
+        <result column="divide_materials_different_parts" property="divideMaterialsDifferentParts" />
+        <result column="private_mark_result" property="privateMarkResult" />
+        <result column="network_validation_results" property="networkValidationResults" />
+        <result column="track_urca" property="trackUrca" />
+        <result column="abnormal_thickness" property="abnormalThickness" />
+        <result column="stress_results" property="stressResults" />
+        <result column="cs" property="cs" />
+        <result column="csk" property="csk" />
+        <result column="dol" property="dol" />
+        <result column="doc" property="doc" />
+        <result column="ct" property="ct" />
+        <result column="ct_or_ta" property="ctOrTa" />
+        <result column="tact" property="tact" />
+        <result column="gt" property="gt" />
+        <result column="ism_rollback_time" property="ismRollbackTime" />
+        <result column="ism_rollback_model" property="ismRollbackModel" />
+        <result column="ism_rollback_error" property="ismRollbackError" />
+        <result column="ng_type" property="ngType" />
+        <result column="machine_id" property="machineId" />
+        <result column="check_type" property="checkType" />
+    </resultMap>
+
+</mapper>

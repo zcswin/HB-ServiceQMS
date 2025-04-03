@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTeInkOpticalDensityMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTeInkOpticalDensity">
+        <id column="id" property="id" />
+        <result column="number" property="number" />
+        <result column="Ink1" property="Ink1" />
+        <result column="Ink2" property="Ink2" />
+        <result column="Ink3" property="Ink3" />
+        <result column="Ink4" property="Ink4" />
+        <result column="result" property="result" />
+        <result column="submit_date" property="submitDate" />
+    </resultMap>
+
+</mapper>

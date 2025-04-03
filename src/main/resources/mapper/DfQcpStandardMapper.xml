@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQcpStandardMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQcpStandard">
+        <id column="id" property="id" />
+        <result column="production_phase" property="productionPhase" />
+        <result column="file_name" property="fileName" />
+        <result column="file_version" property="fileVersion" />
+        <result column="upload_time" property="uploadTime" />
+        <result column="brawing_name" property="brawingName" />
+        <result column="brawing_version" property="brawingVersion" />
+        <result column="technology" property="technology" />
+        <result column="change_content" property="changeContent" />
+        <result column="customer_approval" property="customerApproval" />
+        <result column="approval_time" property="approvalTime" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

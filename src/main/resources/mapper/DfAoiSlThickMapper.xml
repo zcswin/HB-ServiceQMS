@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAoiSlThickMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAoiSlThick">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="check_time" property="checkTime" />
+        <result column="factory" property="factory" />
+        <result column="line_body" property="lineBody" />
+        <result column="project" property="project" />
+        <result column="color" property="color" />
+        <result column="model" property="model" />
+        <result column="user_name" property="userName" />
+        <result column="fai_name" property="faiName" />
+        <result column="name" property="name" />
+        <result column="standard" property="standard" />
+        <result column="up" property="up" />
+        <result column="down" property="down" />
+        <result column="isolation_up" property="isolationUp" />
+        <result column="isolation_down" property="isolationDown" />
+        <result column="status" property="status" />
+        <result column="position" property="position" />
+        <result column="machine_code" property="machineCode" />
+        <result column="number_of_repetitions" property="numberOfRepetitions" />
+    </resultMap>
+
+</mapper>

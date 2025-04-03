@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMyJobMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMyJob">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="job_type" property="jobType" />
+        <result column="recipient" property="recipient" />
+        <result column="result" property="result" />
+        <result column="resource_id" property="resourceId" />
+        <result column="factory_code" property="factoryCode" />
+        <result column="process" property="process" />
+        <result column="control_name" property="controlName" />
+        <result column="classification" property="classification" />
+        <result column="detail" property="detail" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

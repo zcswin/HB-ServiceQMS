@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfCarveUniversalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfCarveUniversal">
+        <id column="id" property="id" />
+        <result column="factory_id" property="factoryId" />
+        <result column="create_time" property="createTime" />
+        <result column="classes" property="classes" />
+        <result column="machine_id" property="machineId" />
+        <result column="is_clean" property="isClean" />
+        <result column="clean_time" property="cleanTime" />
+        <result column="is_replace" property="isReplace" />
+        <result column="replace_time" property="replaceTime" />
+        <result column="confirm_user" property="confirmUser" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfProgrammingChangeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfProgrammingChange">
+        <id column="id" property="id" />
+        <result column="model" property="model" />
+        <result column="regist_time" property="registTime" />
+        <result column="test_programming_version" property="testProgrammingVersion" />
+        <result column="programming_change_time" property="programmingChangeTime" />
+        <result column="size_drawing_version" property="sizeDrawingVersion" />
+        <result column="color_drawing_version" property="colorDrawingVersion" />
+        <result column="size_drawing_area" property="sizeDrawingArea" />
+        <result column="size_change_time" property="sizeChangeTime" />
+        <result column="programming_change_reason" property="programmingChangeReason" />
+        <result column="programming_change_content" property="programmingChangeContent" />
+        <result column="programming_import_time" property="programmingImportTime" />
+        <result column="confirmer" property="confirmer" />
+    </resultMap>
+
+</mapper>

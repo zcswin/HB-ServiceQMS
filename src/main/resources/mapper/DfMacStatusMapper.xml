@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacStatusMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacStatus">
+        <id column="id" property="id" />
+        <result column="MachineCode" property="MachineCode" />
+        <result column="StatusID_Cur" property="statusidCur" />
+        <result column="pub_time" property="pubTime" />
+        <result column="StatusID_Pre" property="statusidPre" />
+        <result column="StatusStep" property="StatusStep" />
+        <result column="warning_mes" property="warningMes" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

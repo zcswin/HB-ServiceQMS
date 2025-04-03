@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAoiPositionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAoiPosition">
+        <id column="id" property="id" />
+        <result column="big_area" property="bigArea" />
+        <result column="area" property="area" />
+        <result column="project" property="project" />
+        <result column="width" property="width" />
+        <result column="height" property="height" />
+        <result column="x1" property="x1" />
+        <result column="x2" property="x2" />
+        <result column="x3" property="x3" />
+        <result column="x4" property="x4" />
+        <result column="y1" property="y1" />
+        <result column="y2" property="y2" />
+        <result column="y3" property="y3" />
+        <result column="y4" property="y4" />
+        <result column="type" property="type" />
+        <result column="position_type" property="positionType" />
+        <result column="top" property="top" />
+        <result column="bottom" property="bottom" />
+        <result column="left" property="left" />
+        <result column="right" property="right" />
+        <result column="centent_x" property="cententX" />
+        <result column="centent_y" property="cententY" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="tier" property="tier" />
+    </resultMap>
+
+</mapper>

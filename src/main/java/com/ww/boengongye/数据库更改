@@ -1,0 +1,632 @@
+9.9 新建表 df_aoi_sl(丝印颜色)
+9.11 新建表 df_aoi_sl_size(丝印尺寸)
+
+9.18
+ALTER TABLE `df_demo_05`.`df_aoi_sl`
+ADD COLUMN `factory` varchar(255) NULL COMMENT '工厂' AFTER `b_down`,
+ADD COLUMN `process` varchar(255) NULL COMMENT '工序' AFTER `factory`,
+ADD COLUMN `line_body` varchar(255) NULL COMMENT '线体' AFTER `process`,
+ADD COLUMN `model` varchar(255) NULL COMMENT '型号' AFTER `type`,
+ADD COLUMN `color` varchar(255) NULL COMMENT '颜色' AFTER `model`,
+ADD COLUMN `audit_id` varchar(255) NULL COMMENT '稽查id' AFTER `color`;
+
+ALTER TABLE `df_demo_05`.`df_aoi_sl`
+ADD COLUMN `number_of_repetitions` int NULL COMMENT '重复发生次数' AFTER `audit_id`,
+ADD COLUMN `produce_dri` varchar(255) NULL COMMENT '生产dri' AFTER `number_of_repetitions`;
+
+
+ALTER TABLE `df_demo_05`.`df_aoi_sl`
+ADD COLUMN `ng_type` varchar(25) NULL COMMENT 'NG类型' AFTER `produce_dri`;
+
+ALTER TABLE `df_demo_05`.`df_aoi_sl`
+MODIFY COLUMN `audit_id` int NULL DEFAULT NULL COMMENT '稽查id' AFTER `color`;
+
+9.18 新建df_aoi_sl_thick
+
+
+9.19
+INSERT INTO `df_demo_05`.`df_liable_man` (`id`, `factory_name`, `section_name`, `station_name`, `process_name`, `problem_level`, `day_or_night`, `liable_man_name`, `liable_man_code`, `create_man`, `create_time`, `type`, `start_time`, `end_time`, `update_time`, `bimonthly`) VALUES (156, '厂2', NULL, NULL, '丝印厚度', '1', '白班', '管理员', 'admin', NULL, '2023-09-19 10:20:43', '丝印厚度', 120, 240, '2023-09-19 10:24:15', '双月');
+INSERT INTO `df_demo_05`.`df_liable_man` (`id`, `factory_name`, `section_name`, `station_name`, `process_name`, `problem_level`, `day_or_night`, `liable_man_name`, `liable_man_code`, `create_man`, `create_time`, `type`, `start_time`, `end_time`, `update_time`, `bimonthly`) VALUES (155, '厂1', NULL, NULL, '丝印厚度', '1', '白班', '雷德喜', 'admin', NULL, '2023-09-19 10:19:39', '丝印厚度', 120, 240, '2023-09-19 10:24:10', '单月');
+
+ALTER TABLE `df_demo_05`.`df_audit_detail`
+ADD COLUMN `color` varchar(255) NULL COMMENT '颜色' AFTER `project`,
+ADD COLUMN `number_of_repetitions` int NULL COMMENT '异常发生次数' AFTER `color`;
+
+9.20
+approveTime表新增三条数据
+INSERT INTO `df_demo_05`.`df_approval_time` (`id`, `type`, `level1`, `level2`, `level3`, `level4`, `create_time`, `create_name`, `update_time`, `update_name`, `update_code`, `read_time_level1`, `read_time_level2`, `read_time_level3`, `dispose_time_level1`, `dispose_time_level2`, `dispose_time_level3`) VALUES (4, '丝印厚度', 60, 45, 60, NULL, NULL, NULL, NULL, NULL, NULL, 15, 15, 15, 45, 45, 45);
+INSERT INTO `df_demo_05`.`df_approval_time` (`id`, `type`, `level1`, `level2`, `level3`, `level4`, `create_time`, `create_name`, `update_time`, `update_name`, `update_code`, `read_time_level1`, `read_time_level2`, `read_time_level3`, `dispose_time_level1`, `dispose_time_level2`, `dispose_time_level3`) VALUES (5, '丝印尺寸', 60, 45, 60, NULL, NULL, NULL, NULL, NULL, NULL, 15, 15, 15, 45, 45, 45);
+INSERT INTO `df_demo_05`.`df_approval_time` (`id`, `type`, `level1`, `level2`, `level3`, `level4`, `create_time`, `create_name`, `update_time`, `update_name`, `update_code`, `read_time_level1`, `read_time_level2`, `read_time_level3`, `dispose_time_level1`, `dispose_time_level2`, `dispose_time_level3`) VALUES (6, '丝印颜色', 60, 45, 60, NULL, NULL, NULL, NULL, NULL, NULL, 15, 15, 15, 45, 45, 45);
+
+reliable_man新增两条数据
+INSERT INTO `df_demo_05`.`df_liable_man` (`id`, `factory_name`, `section_name`, `station_name`, `process_name`, `problem_level`, `day_or_night`, `liable_man_name`, `liable_man_code`, `create_man`, `create_time`, `type`, `start_time`, `end_time`, `update_time`, `bimonthly`) VALUES (158, '厂2', NULL, NULL, '丝印颜色', '1', '白班', '李莉', 'admin', NULL, '2023-09-19 10:20:43', '丝印颜色', 120, 240, '2023-09-20 14:41:16', '双月');
+INSERT INTO `df_demo_05`.`df_liable_man` (`id`, `factory_name`, `section_name`, `station_name`, `process_name`, `problem_level`, `day_or_night`, `liable_man_name`, `liable_man_code`, `create_man`, `create_time`, `type`, `start_time`, `end_time`, `update_time`, `bimonthly`) VALUES (159, '厂2', NULL, NULL, '丝印颜色', '1', '晚班', '李莉', 'admin', NULL, '2023-09-19 10:20:43', '丝印颜色', 120, 240, '2023-09-20 14:41:27', '单月');
+
+
+9.21
+yield_warn
+新增 数据
+INSERT INTO `df_demo_05`.`df_yield_warn` (`id`, `type`, `prewarning_value`, `alarm_value`, `name`, `create_time`, `update_time`) VALUES (5, '砂轮', 145.00, 150.00, '砂轮刀具预警', '2023-09-21 08:51:45', '2023-09-21 08:51:45');
+新增 表
+df_knif_status
+新增数据
+ALTER TABLE `df_demo_05`.`df_audit_detail`
+ADD COLUMN `n_num_tool` varchar(255) NULL COMMENT '主轴刀号' AFTER `mac_code`;
+ADD COLUMN `tool_code` varchar(255) NULL COMMENT '刀具刀柄编号' AFTER `n_num_tool`;
+修改表
+ALTER TABLE `df_demo_05`.`df_knif_status`
+CHANGE COLUMN `event_type` `event_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '0检测 1更换新刀 2刀具结束使用' AFTER `type_data`;
+
+
+9.26
+ALTER TABLE `df_demo_05`.`df_knif_status`
+ADD COLUMN `process` varchar(255) NULL COMMENT '工序' AFTER `pub_time`;
+
+10.10
+INSERT INTO `df_demo_05`.`df_yield_warn` (`id`, `type`, `prewarning_value`, `alarm_value`, `name`, `create_time`, `update_time`) VALUES (6, '外观', 85.00, 80.00, '单项不良预警报警', '2023-10-10 09:15:56', '2023-10-10 09:15:56');
+
+=====>
+10.19
+新建 user_machine_info表
+10.20
+INSERT INTO `df_demo_05`.`df_liable_man` (`id`, `factory_name`, `section_name`, `station_name`, `process_name`, `problem_level`, `day_or_night`, `liable_man_name`, `liable_man_code`, `create_man`, `create_time`, `type`, `start_time`, `end_time`, `update_time`, `bimonthly`) VALUES (160, '厂1', NULL, NULL, '', '1', '晚班', '李莉', 'admin', NULL, '2023-09-19 10:20:43', '尺寸机台连续一周不良TOP3', 120, 240, '2023-10-20 15:59:56', '双月');
+LL, '', '1', '晚班', '李莉', 'admin', NULL, '2023-09-19 10:20:43', '尺寸机台连续一周不良TOP3', 120, 240, '2023-10-20 15:59:15', '单月');
+INSERT INTO `df_demo_05`.`df_liable_man` (`id`, `factory_name`, `section_name`, `station_name`, `process_name`, `problem_level`, `day_or_night`, `liable_man_name`, `liable_man_code`, `create_man`, `create_time`, `type`, `start_time`, `end_time`, `update_time`, `bimonthly`) VALUES (161, '厂1', NULL, NU
+
+=====>
+10.27
+新建表df_knif_status_type6
+
+ALTER TABLE `df_demo_05`.`df_knif_status`
+DROP COLUMN `tool_cut_num`,
+ADD COLUMN `tool_cut_num` int NULL COMMENT '刀具切削次数' AFTER `process`;
+
+11-15
+ALTER TABLE  `df_aoi_defect`
+ADD COLUMN `show_x` double(10, 2) COMMENT '展示的坐标x' ,
+ADD COLUMN `show_y` double(10, 2) COMMENT '展示的坐标y' ;
+
+
+11-17
+CREATE TABLE  `df_size_mac_duration`  (
+  `id` int(0) NOT NULL,
+  `process` varchar(255) COMMENT '工序',
+  `machine_code` varchar(255) COMMENT '机台',
+  `status` varchar(255) COMMENT '状态',
+  `duration_time` int(255) COMMENT '持续时间',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) COMMENT = '机台状态持续时间记录';
+
+CREATE TABLE `df_size_mac_duration_info`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `process` varchar(255) COMMENT '工序',
+  `info_time` datetime(0) COMMENT '统计时间',
+  `normal` double(10, 2) COMMENT '正常',
+  `debug` double(10, 2) COMMENT '调机',
+  `quarantine` double(10, 2) COMMENT '隔离',
+  `machine_count` int(255) COMMENT '开机数',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+
+ALTER TABLE  `df_size_mac_duration`
+ADD COLUMN `check_time` datetime(0) COMMENT '记录时间' AFTER `create_time`,
+ADD COLUMN `after_status` varchar(255) COMMENT '更新后的状态' AFTER `check_time`;
+
+
+ALTER TABLE `df_demo_04`.`df_size_fail`
+ADD COLUMN `tolerance` varchar(255) COMMENT '公差' AFTER `parent_id`;
+
+ALTER TABLE `df_demo_04`.`df_audit_detail`
+ADD COLUMN `color` varchar(255) COMMENT '颜色' AFTER `tool_code`;
+
+ALTER TABLE `df_demo_04`.`df_size_cont_stand`
+ADD COLUMN `color` varchar(255) COMMENT '颜色' AFTER `project`;
+
+1-15
+ALTER TABLE `df_demo_04`.`line_body`
+ADD COLUMN `project` varchar(255) COMMENT '项目' AFTER `description`,
+ADD COLUMN `process` varchar(255) COMMENT '工序' AFTER `project`;
+
+ALTER TABLE `df_demo_04`.`df_process`
+ADD COLUMN `factory_code` varchar(255) COMMENT '工厂' AFTER `floor`,
+ADD COLUMN `project` varchar(255) COMMENT '项目' AFTER `factory_code`;
+
+ALTER TABLE `df_demo_04`.`df_process_project_config`
+ADD COLUMN `factory_code` varchar(255) COMMENT '工厂' AFTER `floor`;
+
+ALTER TABLE `df_demo_04`.`df_project`
+ADD COLUMN `floor` varchar(255) COMMENT '楼层' AFTER `line_code`;
+
+ALTER TABLE `df_demo_04`.`line_body`
+ADD COLUMN `floor` varchar(255) COMMENT '楼层' AFTER `process`;
+
+
+2024-02-21
+CREATE TABLE `df_demo_05`.`df_dynamic_ipqc_size`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `machine_code` varchar(255) COMMENT '机台号',
+  `lsl` double(10, 3) COMMENT '下限',
+  `usl` double(10, 3) COMMENT '上限',
+  `standard` double(10, 3) COMMENT '标准',
+  `sigma` double(10, 3) COMMENT '西格玛值',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+ALTER TABLE `df_demo_05`.`df_dynamic_ipqc_size`
+ADD COLUMN `check_id` int(0) COMMENT '关联尺寸的id' AFTER `create_time`;
+
+
+ALTER TABLE `df_demo_05`.`df_dynamic_ipqc_size`
+ADD COLUMN `number` int(0) COMMENT '编号' AFTER `check_id`;
+
+
+03-08
+DROP TABLE IF EXISTS `df_pro_time`;
+CREATE TABLE `df_pro_time`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `product` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '产品',
+  `process` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '工序',
+  `standard` int(0) DEFAULT NULL COMMENT '标准值',
+  `upper_limit` int(0) DEFAULT NULL COMMENT '上限范围',
+  `lower_limit` int(0) DEFAULT NULL COMMENT '下限范围',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+CREATE TABLE `df_demo_04`.`df_grinding_standard`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `project` varchar(255),
+  `process` varchar(255),
+  `tool_num` int(0),
+  `standard` int(255),
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+ALTER TABLE `df_demo_04`.`df_grinding_standard`
+MODIFY COLUMN `tool_num` varchar(255) DEFAULT NULL AFTER `process`;
+
+
+-------------------- start 2024-05-29 ------------------------------
+-- df_size_cont_stand表添加字段
+ALTER TABLE `df_size_detail`
+ADD COLUMN `work_time` datetime(0) NULL DEFAULT NULL COMMENT '加工时间' AFTER `color`,
+ADD COLUMN `fixture_id` int NULL DEFAULT NULL COMMENT 'RFID架子编号' AFTER `work_time`,
+ADD COLUMN `knife_first_life` int NULL DEFAULT NULL COMMENT '刀具1寿命' AFTER `fixture_id`,
+ADD COLUMN `knife_second_life` int NULL DEFAULT NULL COMMENT '刀具2寿命' AFTER `knife_first_life`,
+ADD COLUMN `knife_third_life` int NULL DEFAULT NULL COMMENT '刀具3寿命' AFTER `knife_second_life`,
+ADD COLUMN `knife_fourth_life` int NULL DEFAULT NULL COMMENT '刀具4寿命' AFTER `knife_third_life`,
+ADD COLUMN `change_knife_status` int NULL DEFAULT NULL COMMENT '有无换刀 (0=无换刀；1=测量异常换刀后首件；2=刀寿到期换刀后首件)' AFTER `knife_fourth_life`,
+ADD COLUMN `debug_status` int NULL DEFAULT NULL COMMENT '有无调机(0=无调机；1=测量异常调机后首件)' AFTER `change_knife_status`,
+ADD COLUMN `change_class_status` int NULL DEFAULT NULL COMMENT '有无换班(0=无换班；1=换班后首件)' AFTER `debug_status`,
+ADD COLUMN `change_clamp_status` int NULL DEFAULT NULL COMMENT '有无换夹治具(0=无换夹治具；1=换夹治具后首件)' AFTER `change_class_status`
+ADD COLUMN `machine_life` int NULL DEFAULT NULL COMMENT '机台寿命' AFTER `change_clamp_status`;
+
+-- df_machine表添加字段
+ALTER TABLE `df_demo_05`.`df_machine`
+ADD COLUMN `join_time` datetime(0) NULL DEFAULT NULL COMMENT '入厂时间' AFTER `floor`,
+ADD COLUMN `machine_life` int NULL DEFAULT NULL COMMENT ' 机台寿命' AFTER `join_time`;
+
+
+-- 添加砂轮刀具记录表
+CREATE TABLE `df_grinding_info` (
+  `id` int NOT NULL AUTO_INCREMENT COMMENT '唯一标识',
+  `type_data` int DEFAULT NULL COMMENT 'json包/数据CODE',
+  `machine_code` varchar(255) DEFAULT NULL COMMENT '设备编号',
+  `n_index_tool` int DEFAULT NULL COMMENT '设备当前主轴刀号',
+  `n_status_tool` int DEFAULT NULL COMMENT '刀具状态：0-停止废弃；1-初始更换;2-使用中；',
+  `dt_chanage` datetime DEFAULT NULL COMMENT '更换时间',
+  `dt_abandon` datetime DEFAULT NULL COMMENT '废弃时间(nStatusTool=0时)',
+  `tool_code` varchar(255) DEFAULT NULL COMMENT '刀具二维码编号',
+  `tool_spec_code` varchar(255) DEFAULT NULL COMMENT '刀具规格编号',
+  `n_total_usage_pro` int DEFAULT NULL COMMENT '换刀后已加工片数',
+  `n_total_usage_sec` int DEFAULT NULL COMMENT '换刀后总切削时间(s)	',
+  `pub_time` datetime DEFAULT NULL COMMENT '信息推送时间戳',
+  `is_use` int DEFAULT NULL COMMENT '是否使用',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='砂轮刀具记录';
+
+-- 添加夹具表
+CREATE TABLE `df_clamp` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `project` varchar(255) DEFAULT NULL COMMENT '项目',
+  `process` varchar(255) DEFAULT NULL COMMENT '工序',
+  `machine` varchar(255) DEFAULT NULL COMMENT '机台号',
+  `time` datetime DEFAULT NULL COMMENT '时间',
+  `is_use` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '是否使用',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='夹具表';
+
+-- 添加机台调机记录表
+CREATE TABLE `df_mac_change` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `MachineCode` varchar(50) DEFAULT NULL,
+  `StatusID_Cur` int DEFAULT NULL,
+  `pub_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `StatusID_Pre` int DEFAULT NULL COMMENT '设备上次状态',
+  `StatusStep` int DEFAULT NULL COMMENT '上次状态持续时间',
+  `warning_mes` varchar(255) DEFAULT NULL COMMENT '告警信息',
+  `update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `is_use` tinyint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='机台调机记录';
+-------------------- end 2024-05-29 -----------------------------------------
+ALTER TABLE `df_demo_05`.`df_test_man`
+ADD COLUMN `type` varchar(255) COMMENT '类型' AFTER `update_time`;
+
+ALTER TABLE `df_qms_ipqc_waig_total_new`
+ADD COLUMN `confirmor` varchar(255) COMMENT '确认人' AFTER `type`;
+-------------------- start 2024-06-12 ---------------------------------------
+
+-------------------- start 2024-06-21 ---------------------------------------
+CREATE TABLE `df_demo_05`.`df_qms_ipqc_flaw_log`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `bar_code` varchar(255) COMMENT '玻璃码',
+  `process` varchar(255) COMMENT '工序',
+  `flaw
+_name` varchar(255) COMMENT '缺陷',
+  `fa` varchar(255) COMMENT 'fa',
+  `ca` varchar(255) COMMENT 'ca',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `df_demo_05`.`df_qms_ipqc_flaw_log_detail`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(0) COMMENT 'df_qms_ipqc_flaw_log的id',
+  `process` varchar(255) COMMENT '工序名',
+  `product_time` datetime(0) COMMENT '生产时间',
+  `clamp_code` varchar(255) COMMENT '架子号',
+  `machine_code` varchar(255) COMMENT '机台号',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+
+-------------------- end 2024-06-21 ---------------------------------------
+-------------------- start 2024-06-24 ---------------------------------------
+DROP TABLE IF EXISTS `df_qms_rfid_clamp_sn`;
+CREATE TABLE `df_qms_rfid_clamp_sn`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `bar_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '玻璃码',
+  `clamp_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '载具码',
+  `product_time` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '生产时间',
+  `process` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '工序',
+  `create_time` datetime(0) DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+SET FOREIGN_KEY_CHECKS = 1;
+-------------------- end 2024-06-24 ---------------------------------------
+
+
+--------------------- start 2024-07-04 ------------
+ALTER TABLE `df_demo_05`.`df_process`
+ADD COLUMN `department` varchar(255) COMMENT '部门' AFTER `project`;
+---------------------end 2024-07-04----------------
+
+--------------------- start 2024-09-09 ------------
+ALTER TABLE `df_demo_05`.`df_qms_ipqc_waig_total`
+ADD COLUMN `check_machine` varchar(255) NULL COMMENT '抽检机台' AFTER `type`,
+ADD COLUMN `check_process` varchar(255) NULL COMMENT '抽检工序' AFTER `check_machine`;
+
+--------------------- end 2024-09-09 ------------
+
+
+----------------------start 2024-12-05 --------------------
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for df_qms_ipqc_waig_total_check
+-- ----------------------------
+DROP TABLE IF EXISTS `df_qms_ipqc_waig_total_check`;
+CREATE TABLE `df_qms_ipqc_waig_total_check`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `f_sn` int NULL DEFAULT NULL,
+  `f_bigpro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_barcode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_mac` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_fac` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_bigseq` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_seq` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '工序',
+  `f_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_stage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_line` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_test_category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '测试类别 FAI/CPK',
+  `f_test_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_test_man` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_research` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_time` datetime NULL DEFAULT CURRENT_TIMESTAMP,
+  `f_user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_cont_frequ` int NULL DEFAULT NULL COMMENT '管控频率',
+  `create_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `create_user_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `create_time` datetime NULL DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'NG/OK',
+  `affect_count` int NULL DEFAULT NULL COMMENT '影响数量',
+  `category_id` int NULL DEFAULT NULL COMMENT '1',
+  `spot_check_count` int NULL DEFAULT NULL COMMENT '抽检总数',
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `check_machine` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '抽检机台',
+  `check_process` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '抽检工序',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `idx_df_qms_ipqc_waig_total_f_time`(`f_time` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 875 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for df_qms_ipqc_waig_detail_check
+-- ----------------------------
+DROP TABLE IF EXISTS `df_qms_ipqc_waig_detail_check`;
+CREATE TABLE `df_qms_ipqc_waig_detail_check`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `f_sn` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_big_area` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_sm_area` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_defect` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_sort` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_level` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_standard` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_zerostandard` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_result` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_x` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_y` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `f_time` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `f_parent_id` int NULL DEFAULT NULL,
+  `f_product_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '产品编号',
+  `is_uniwafe` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `idx_df_qms_ipqc_waig_detail_f_time`(`f_time` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4543 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+-------------------------- end 2024-12-05 -------------------------------
+
+-------------------------- start 2024-12-25 -------------------------------
+DROP TABLE IF EXISTS `df_size_cont_relation`;
+CREATE TABLE `df_size_cont_relation`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ipqc_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT 'ipqc测试项名称',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '名称',
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '类型',
+  `qcp_usl` double(10, 2) NULL DEFAULT NULL,
+  `qcp_standard` double(10, 2) NULL DEFAULT NULL,
+  `qcp_lsl` double(10, 2) NULL DEFAULT NULL,
+  `inner_usl` double(10, 2) NULL DEFAULT NULL,
+  `inner_standard` double(10, 2) NULL DEFAULT NULL,
+  `inner_lsl` double(10, 2) NULL DEFAULT NULL,
+  `create_time` datetime NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `process` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '工序',
+  `project` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '项目',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+
+ALTER TABLE `df_demo_05`.`df_qms_ipqc_waig_total`
+ADD COLUMN `confirmor` varchar(255) NULL COMMENT '确认人' AFTER `check_process`;
+
+ALTER TABLE `df_demo_05`.`df_qms_ipqc_waig_total_check`
+ADD COLUMN `confirmor` varchar(255) NULL COMMENT '确认人' AFTER `check_process`;
+
+
+DROP TABLE IF EXISTS `df_tz_suggest`;
+CREATE TABLE `df_tz_suggest`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '名称',
+  `level` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '等级',
+  `min` double(10, 2) NULL DEFAULT NULL COMMENT '最小值',
+  `max` double(10, 2) NULL DEFAULT NULL COMMENT '最大值',
+  `suggest` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '建议',
+  `create_time` datetime NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` datetime NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '判定类型',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+-------------------------- end 2024-12-25 -------------------------------
+
+-------------------------- start 2025-01-05 -------------------------------
+ALTER TABLE `df_lead_detail`
+ADD COLUMN `factory` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '工厂' AFTER `result`,
+ADD COLUMN `project` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '项目' AFTER `factory`;
+
+ALTER TABLE `df_size_cont_relation`
+ADD COLUMN `factory` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '工厂' AFTER `update_time`,
+ADD COLUMN `process` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '工序' AFTER `factory`,
+ADD COLUMN `project` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '项目' AFTER `process`,
+ADD COLUMN `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '颜色' AFTER `project`;
+
+ALTER TABLE `df_tz_detail`
+ADD COLUMN `floor` varchar(255) NULL DEFAULT NULL COMMENT '楼层' AFTER `check_type`;
+
+ALTER TABLE `df_lead_detail`
+ADD COLUMN `floor` varchar(255) NULL DEFAULT NULL COMMENT '楼层' AFTER `create_time`;
+
+
+-------------------------- end 2025-01-05 -------------------------------
+
+
+-------------------------- end 2025-01-07 -------------------------------
+ALTER TABLE `df_demo_05`.`df_machine`
+ADD COLUMN `project` varchar(255) NULL COMMENT '项目' AFTER `machine_life`;
+
+
+ALTER TABLE `df_demo_05`.`user`
+ADD COLUMN `type` varchar(255) NULL COMMENT '用户类型' AFTER `remark`;
+
+ALTER TABLE `df_demo_05`.`df_risk_product`
+ADD COLUMN `check_result` varchar(255) NULL COMMENT '抽检结果' AFTER `create_time`;
+
+ALTER TABLE `df_demo_05`.`df_risk_product`
+ADD COLUMN `type` varchar(255) NULL COMMENT '尺寸/外观' AFTER `check_result`;
+
+
+ALTER TABLE `df_demo_05`.`df_audit_detail`
+ADD COLUMN `ng_phase` varchar(255) NULL COMMENT 'NG阶段' AFTER `number_of_repetitions`;
+
+ALTER TABLE `df_demo_05`.`df_flow_data`
+ADD COLUMN `ng_phase` varchar(255) NULL COMMENT 'NG阶段' AFTER `show_approver`;
+
+ALTER TABLE `df_demo_05`.`df_flow_data`
+ADD COLUMN `machine_code` varchar(255) COMMENT '机台号' AFTER `ng_phase`;
+-------------------------- end 2025-01-07 -------------------------------
+
+-------------------------- start 2025-02-14 -------------------------------
+ALTER TABLE `df_demo_05`.`df_size_check_item_infos`
+ADD COLUMN `check_type` varchar(255) NULL COMMENT '检验类型,FAI/CPK/风险' AFTER `key_point`;
+-------------------------- end 2025-02-14 -------------------------------
+
+-------------------------- start 2025-02-19 -------------------------------
+ALTER TABLE `df_demo_05`.`df_audit_detail`
+ADD COLUMN `sn` varchar(255) NULL COMMENT '玻璃码' AFTER `tool_code`;
+
+
+ALTER TABLE `df_demo_05`.`df_size_fail`
+ADD COLUMN `type` varchar(255) NULL DEFAULT 'check' COMMENT '数据类型check/warm(风险品,绑定稽查单id)' AFTER `tolerance`;
+-------------------------- end 2025-02-19 -------------------------------
+
+-------------------------- start 2025-03-02 -------------------------------
+ALTER TABLE `df_demo_05`.`df_size_detail`
+ADD COLUMN `bearing` varchar(255)  COMMENT '轴号' AFTER `machine_life`;
+
+-------------------------- end 2025-03-02 -------------------------------
+
+-------------------------- start 2025-03-12 -------------------------------
+ALTER TABLE `df_demo_05`.`df_control_standard_status`
+ADD COLUMN `process` varchar(255) COMMENT '工序' AFTER `job_id`;
+
+
+ALTER TABLE `df_demo_05`.`df_control_standard_config`
+ADD COLUMN `batch_code` varchar(255) NULL COMMENT '批次号' AFTER `update_time`;
+
+CREATE TABLE `df_demo_05`.`df_control_standard_config_batch`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `batch_code` varchar(255) NULL COMMENT '批次号',
+  `project` varchar(255) NULL COMMENT '项目',
+  `line_body` varchar(255) NULL COMMENT '线体',
+  `create_time` datetime NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `df_demo_05`.`df_control_standard_config_batch_log`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `batch_code` varchar(255) NULL COMMENT '批次号',
+  `project` varchar(255) NULL COMMENT '项目',
+  `line_body` varchar(255) NULL COMMENT '线体',
+  `create_time` datetime NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+);
+-------------------------- end 2025-03-12 -------------------------------
+-------------------------- start 2025-04-02 -------------------------------
+DROP TABLE IF EXISTS `daily_summary`;
+CREATE TABLE `daily_summary`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `date` date NULL DEFAULT NULL COMMENT '日期',
+  `f_time` datetime NULL DEFAULT NULL COMMENT '时间',
+  `sort` int NULL DEFAULT NULL COMMENT '排序',
+  `f_bigpro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '项目',
+  `f_seq` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '工序',
+  `f_fac` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '厂名',
+  `f_color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '颜色',
+  `f_test_category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '测试类别',
+  `f_test_man` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '检验员',
+  `f_sort` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '缺陷名称',
+  `f_stage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '阶段',
+  `f_test_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '校验类型',
+  `f_mac` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '机台',
+  `f_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '抽检类型',
+  `f_line` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '产线',
+  `num` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '缺陷数',
+  `spot_check_count` int NULL DEFAULT NULL COMMENT '抽检数',
+  `ok_num` int NULL DEFAULT NULL COMMENT 'ok 数',
+  `ok_rate` double(5, 2) NULL DEFAULT NULL COMMENT '良率',
+  `ng_rate` double(5, 2) NULL DEFAULT NULL COMMENT 'ng率',
+  `ng_num` int NULL DEFAULT NULL COMMENT 'ng数',
+  `shift` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '班次',
+  `statistic_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '周期(天，周，月，年)',
+  `type_num` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL,
+  `statistic_date` date NULL DEFAULT NULL COMMENT '开始时间',
+  `end_date` date NULL DEFAULT NULL COMMENT '结束时间',
+  `data_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '数据区间',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `idx_daily_type_stat_date`(`data_type` ASC, `statistic_type` ASC, `date` ASC) USING BTREE,
+  INDEX `idx_weekly_type_stat_typenum`(`data_type` ASC, `statistic_type` ASC, `type_num` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1635917 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = DYNAMIC;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+DROP TABLE IF EXISTS `daily_check_summary`;
+CREATE TABLE `daily_check_summary`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `date` date NULL DEFAULT NULL COMMENT '日期',
+  `f_time` datetime NULL DEFAULT NULL COMMENT '时间',
+  `sort` int NULL DEFAULT NULL COMMENT '排序',
+  `f_bigpro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '项目',
+  `f_seq` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '工序',
+  `f_fac` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '厂名',
+  `f_color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '颜色',
+  `f_test_category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '测试类别',
+  `f_test_man` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '检验员',
+  `f_sort` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '缺陷名称',
+  `f_stage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '阶段',
+  `f_test_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '校验类型',
+  `f_mac` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '机台',
+  `f_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '抽检类型',
+  `f_line` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '产线',
+  `num` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '缺陷数',
+  `spot_check_count` int NULL DEFAULT NULL COMMENT '抽检数',
+  `ok_num` int NULL DEFAULT NULL COMMENT 'ok 数',
+  `ok_rate` double(5, 2) NULL DEFAULT NULL COMMENT '良率',
+  `ng_rate` double(5, 2) NULL DEFAULT NULL COMMENT 'ng率',
+  `ng_num` int NULL DEFAULT NULL COMMENT 'ng数',
+  `shift` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '班次',
+  `statistic_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '周期(天，周，月，年)',
+  `type_num` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL,
+  `statistic_date` date NULL DEFAULT NULL COMMENT '开始时间',
+  `end_date` date NULL DEFAULT NULL COMMENT '结束时间',
+  `data_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '数据区间',
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `idx_daily_type_stat_date`(`data_type` ASC, `statistic_type` ASC, `date` ASC) USING BTREE,
+  INDEX `idx_weekly_type_stat_typenum`(`data_type` ASC, `statistic_type` ASC, `type_num` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1635917 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = DYNAMIC;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+
+
+DROP TABLE IF EXISTS `defect_summary`;
+CREATE TABLE `defect_summary`  (
+  `summary_id` int NOT NULL AUTO_INCREMENT COMMENT '汇总记录ID',
+  `process_summary_id` int NOT NULL COMMENT '主表汇总记录ID',
+  `defect_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL COMMENT '缺陷名称',
+  `defect_rate` double(5, 2) NULL DEFAULT NULL COMMENT '缺陷占比',
+  `defect_count` int NOT NULL DEFAULT 0 COMMENT '缺陷数量',
+  PRIMARY KEY (`summary_id`) USING BTREE,
+  INDEX `idx_defect_summary_process_summary_id`(`process_summary_id` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 7541 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin COMMENT = '缺陷数据汇总表，用于存储每个工序的缺陷数据汇总' ROW_FORMAT = DYNAMIC;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+-------------------------- end 2025-04-02 -------------------------------
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfGroupAdjustmentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfGroupAdjustment">
+        <id column="id" property="id" />
+        <result column="group_id" property="groupId" />
+        <result column="all_mac_num" property="allMacNum" />
+        <result column="quarantine_num" property="quarantineNum" />
+        <result column="adjustment_num" property="adjustmentNum" />
+        <result column="normal_num" property="normalNum" />
+        <result column="unused_num" property="unusedNum" />
+        <result column="all_test_num" property="allTestNum" />
+        <result column="quarantine_rate" property="quarantineRate" />
+        <result column="adjustment_rate" property="adjustmentRate" />
+        <result column="normal_rate" property="normalRate" />
+        <result column="unused_rate" property="unusedRate" />
+        <result column="day_or_night" property="dayOrNight" />
+        <result column="factory" property="factory" />
+        <result column="project" property="project" />
+        <result column="process" property="process" />
+        <result column="linebody" property="linebody" />
+        <result column="test_type" property="testType" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

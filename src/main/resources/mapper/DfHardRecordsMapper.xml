@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfHardRecordsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfHardRecords">
+        <id column="id" property="id" />
+        <result column="factory_id" property="factoryId" />
+        <result column="product_model" property="productModel" />
+        <result column="meterial" property="meterial" />
+        <result column="hot_start_time" property="hotStartTime" />
+        <result column="hot_end_time" property="hotEndTime" />
+        <result column="hot_temperature" property="hotTemperature" />
+        <result column="hard_start_time" property="hardStartTime" />
+        <result column="hard_end_time" property="hardEndTime" />
+        <result column="hard_temperature" property="hardTemperature" />
+        <result column="out_time" property="outTime" />
+        <result column="cool_4" property="cool_4" />
+        <result column="cool_8" property="cool_8" />
+        <result column="cool_12" property="cool_12" />
+        <result column="hard_total" property="hardTotal" />
+        <result column="hard_amount" property="hardAmount" />
+        <result column="hard_cage_num" property="hardCageNum" />
+        <result column="process_start_time" property="processStartTime" />
+        <result column="process_name" property="processName" />
+        <result column="processs_kg_amount" property="processsKgAmount" />
+        <result column="confirmer_operator" property="confirmerOperator" />
+        <result column="confirmer_ipqc" property="confirmerIpqc" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+</mapper>

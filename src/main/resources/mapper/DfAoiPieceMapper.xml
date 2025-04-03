@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAoiPieceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAoiPiece">
+        <id column="id" property="id" />
+        <result column="pieceid" property="pieceid" />
+        <result column="name" property="name" />
+        <result column="frameid" property="frameid" />
+        <result column="time" property="time" />
+        <result column="qualityid" property="qualityid" />
+        <result column="ip" property="ip" />
+        <result column="timesec" property="timesec" />
+        <result column="recipe" property="recipe" />
+        <result column="RE_result" property="reResult" />
+        <result column="RE_log" property="reLog" />
+        <result column="RE_time" property="reTime" />
+        <result column="username" property="username" />
+        <result column="clientip" property="clientip" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_name" property="updateName" />
+    </resultMap>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="DfAoiEscapeMap" type="com.ww.boengongye.entity.DfAoiEscape">
+        <result column="userName" property="userName" />
+        <collection property="dfAoiEscapePoints" ofType="com.ww.boengongye.entity.DfAoiEscapePoint">
+            <result column="escapeName" property="escapeName" />
+            <result column="escapeNumber" property="escapeNumber" />
+        </collection>
+    </resultMap>
+
+<!--    <select id="getAllEscapeList" resultMap="DfAoiEscapeMap">-->
+<!--        select userName,escapeName,escapeNumber-->
+<!--        from-->
+<!--        (select userName,escapeName,escapeNumber,-->
+<!--        row_number()over(partition by userName order by escapeNumber desc) num-->
+<!--        from-->
+<!--        (select u.alias userName,dad.featurevalues escapeName,count(dad.featurevalues) escapeNumber-->
+<!--        from df_aoi_undetected dau-->
+<!--        left join `user` u-->
+<!--        on u.name = dau.fqc_user-->
+<!--        left join df_aoi_defect dad-->
+<!--        on dad.defectid = dau.defectid-->
+<!--        left join df_aoi_piece dap-->
+<!--        on dap.bar_code =dau.barcode-->
+<!--        left join df_e_code_protect decp-->
+<!--        on substring(dap.name,decp.start_data1,decp.cut_length1) = decp.match_data1-->
+<!--        and substring(dap.name,decp.start_data2,decp.cut_length2) = decp.match_data2-->
+<!--        left join df_aoi_decide_log dadl-->
+<!--        on dadl.bar_code =dau.barcode and dadl.qc_result ='OK'-->
+<!--        where dau.oqc_use =#{userCode}-->
+<!--        <if test="projectId!=null and projectId!=''">-->
+<!--            and decp.project_id =#{userCode}-->
+<!--        </if>-->
+<!--        <if test="colour!=null and colour!=''">-->
+<!--            and decp.colour =#{colour}-->
+<!--        </if>-->
+<!--        <if test="startTime!=null and startTime!=''">-->
+<!--            and dadl.qc_time >= #{startTime}-->
+<!--        </if>-->
+<!--        <if test="endTime!=null and endTime!=''">-->
+<!--            and #{endTime} >= dadl.qc_time-->
+<!--        </if>-->
+<!--        group by u.alias,dad.featurevalues)-->
+<!--        countEscape)-->
+<!--        coutEscape_new-->
+<!--        where 5 >= coutEscape_new.num;-->
+<!--    </select>-->
+
+
+</mapper>

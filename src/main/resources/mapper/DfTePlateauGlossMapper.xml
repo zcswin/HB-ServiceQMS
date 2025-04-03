@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTePlateauGlossMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTePlateauGloss">
+        <result column="Vendor" property="Vendor" />
+        <result column="Site" property="Site" />
+        <result column="Project" property="Project" />
+        <result column="Phase" property="Phase" />
+        <result column="Line" property="Line" />
+        <result column="Date" property="Date" />
+        <result column="Shift" property="Shift" />
+        <result column="Config" property="Config" />
+        <result column="Color" property="Color" />
+        <result column="TestName" property="TestName" />
+        <result column="LastProcessbeforeMeasurement" property="LastProcessbeforeMeasurement" />
+        <result column="DwelltimesinceProcess" property="DwelltimesinceProcess" />
+        <result column="KeyProcessMachineName" property="KeyProcessMachineName" />
+        <result column="KeyProcessMachineID" property="KeyProcessMachineID" />
+        <result column="ProcessRecipe" property="ProcessRecipe" />
+        <result column="ProcessFixtureID" property="ProcessFixtureID" />
+        <result column="MeasurementDevice" property="MeasurementDevice" />
+        <result column="MeasurementDeviceID" property="MeasurementDeviceID" />
+        <result column="PartID" property="PartID" />
+        <result column="TestLocation" property="TestLocation" />
+        <result column="Measure1" property="Measure1" />
+        <result column="Measure2" property="Measure2" />
+        <result column="Measure3" property="Measure3" />
+        <result column="Measure4" property="Measure4" />
+        <result column="Measure5" property="Measure5" />
+        <result column="GlossAverage" property="GlossAverage" />
+        <result column="Spec" property="Spec" />
+        <result column="result" property="result" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

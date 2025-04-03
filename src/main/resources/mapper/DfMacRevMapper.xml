@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacRevMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacRev">
+        <id column="id" property="id" />
+        <result column="MachineCode" property="MachineCode" />
+        <result column="Tool_Index" property="toolIndex" />
+        <result column="Type_Data" property="typeData" />
+        <result column="feedrate" property="feedrate" />
+        <result column="override_feedrate" property="overrideFeedrate" />
+        <result column="override_rapid" property="overrideRapid" />
+        <result column="override_spindle" property="overrideSpindle" />
+        <result column="pub_time" property="pubTime" />
+        <result column="speed_spindle" property="speedSpindle" />
+    </resultMap>
+
+</mapper>

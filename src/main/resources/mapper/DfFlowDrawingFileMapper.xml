@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfFlowDrawingFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfFlowDrawingFile">
+        <id column="id" property="id" />
+        <result column="category" property="category" />
+        <result column="change_scope" property="changeScope" />
+        <result column="project_code" property="projectCode" />
+        <result column="change_version_code" property="changeVersionCode" />
+        <result column="application_stage" property="applicationStage" />
+        <result column="change_content" property="changeContent" />
+        <result column="change_date" property="changeDate" />
+        <result column="download_date" property="downloadDate" />
+        <result column="factory_name" property="factoryName" />
+        <result column="factory_code" property="factoryCode" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

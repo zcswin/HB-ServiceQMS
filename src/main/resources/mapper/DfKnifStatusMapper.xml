@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfKnifStatusMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfKnifStatus">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="type_data" property="typeData" />
+        <result column="enent_type" property="enentType" />
+        <result column="machine_code" property="machineCode" />
+        <result column="n_num_tool" property="nNumTool" />
+        <result column="sec_duration" property="secDuration" />
+        <result column="tool_code" property="toolCode" />
+        <result column="tool_spec_code" property="toolSpecCode" />
+        <result column="tool_check_result" property="toolCheckResult" />
+        <result column="dt_event" property="dtEvent" />
+        <result column="pub_time" property="pubTime" />
+    </resultMap>
+
+</mapper>

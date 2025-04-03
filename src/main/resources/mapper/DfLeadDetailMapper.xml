@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfLeadDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfLeadDetail">
+        <id column="id" property="id" />
+        <result column="check_time" property="checkTime" />
+        <result column="sn" property="sn" />
+        <result column="work_position" property="workPosition" />
+        <result column="bin" property="bin" />
+        <result column="result" property="result" />
+        <result column="color" property="color" />
+        <result column="check_type" property="checkType" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

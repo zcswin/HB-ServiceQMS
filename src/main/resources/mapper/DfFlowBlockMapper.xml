@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfFlowBlockMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfFlowBlock">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="font_color" property="fontColor" />
+        <result column="font_size" property="fontSize" />
+        <result column="border_color" property="borderColor" />
+        <result column="top_anchor" property="topAnchor" />
+        <result column="top_title" property="topTitle" />
+        <result column="top_font_color" property="topFontColor" />
+        <result column="top_line_color" property="topLineColor" />
+        <result column="top_line_type" property="topLineType" />
+        <result column="bottom_anchor" property="bottomAnchor" />
+        <result column="bottom_title" property="bottomTitle" />
+        <result column="bottom_font_color" property="bottomFontColor" />
+        <result column="bottom_line_color" property="bottomLineColor" />
+        <result column="bottom_line_type" property="bottomLineType" />
+        <result column="left_anchor" property="leftAnchor" />
+        <result column="left_title" property="leftTitle" />
+        <result column="left_font_color" property="leftFontColor" />
+        <result column="left_line_color" property="leftLineColor" />
+        <result column="left_line_type" property="leftLineType" />
+        <result column="right_anchor" property="rightAnchor" />
+        <result column="right_title" property="rightTitle" />
+        <result column="right_font_color" property="rightFontColor" />
+        <result column="right_line_color" property="rightLineColor" />
+        <result column="right_line_type" property="rightLineType" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="parent_id" property="parentId" />
+        <result column="position_left" property="positionLeft" />
+        <result column="position_top" property="positionTop" />
+        <result column="flow_id" property="flowId" />
+        <result column="sort" property="sort" />
+        <result column="remark" property="remark" />
+        <result column="flow_type" property="flowType" />
+        <result column="up_one_level" property="upOneLevel" />
+    </resultMap>
+
+</mapper>

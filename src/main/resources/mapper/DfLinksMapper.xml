@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfLinksMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfLinks">
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="connection_id" property="connectionId" />
+        <result column="page_source_id" property="pageSourceId" />
+        <result column="page_source_anchor" property="pageSourceAnchor" />
+        <result column="page_target_id" property="pageTargetId" />
+        <result column="page_target_anchor" property="pageTargetAnchor" />
+        <result column="create_time" property="createTime" />
+        <result column="title" property="title" />
+        <result column="font_color" property="fontColor" />
+        <result column="line_color" property="lineColor" />
+        <result column="line_type" property="lineType" />
+    </resultMap>
+
+</mapper>

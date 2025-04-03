@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfReliabilityDetailsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfReliabilityDetails">
+        <id column="id" property="id" />
+        <result column="factory" property="factory" />
+        <result column="model" property="model" />
+        <result column="process" property="process" />
+        <result column="test_project" property="testProject" />
+        <result column="test_standard" property="testStandard" />
+        <result column="test_device" property="testDevice" />
+        <result column="test_amount" property="testAmount" />
+        <result column="fai_rate" property="faiRate" />
+        <result column="fai_amount" property="faiAmount" />
+        <result column="fai_unit" property="faiUnit" />
+        <result column="ipqc_rate" property="ipqcRate" />
+        <result column="ipqc_amount" property="ipqcAmount" />
+        <result column="ipqc_unit" property="ipqcUnit" />
+    </resultMap>
+
+</mapper>

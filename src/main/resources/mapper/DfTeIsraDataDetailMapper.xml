@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTeIsraDataDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTeIsraDataDetail">
+        <id column="id" property="id" />
+        <result column="OverallYield" property="OverallYield" />
+        <result column="BGWavinessYield" property="BGWavinessYield" />
+        <result column="PlateauCuttermarkYield" property="PlateauCuttermarkYield" />
+        <result column="Others" property="Others" />
+        <result column="OverallYield2" property="OverallYield2" />
+        <result column="BGWavinessYield2" property="BGWavinessYield2" />
+        <result column="PlateauCuttermarkYield2" property="PlateauCuttermarkYield2" />
+        <result column="Others2" property="Others2" />
+        <result column="Barcode" property="Barcode" />
+        <result column="Slot" property="Slot" />
+        <result column="OverallResult" property="OverallResult" />
+        <result column="p_1c_HOOK_TL" property="p1cHookTl" />
+        <result column="p_1c_FANG_R" property="p1cFangR" />
+        <result column="p_1c_FANG_L" property="p1cFangL" />
+        <result column="p_1f_HOOK_SP_TR" property="p1fHookSpTr" />
+        <result column="p_1f_HOOK_SP_BR" property="p1fHookSpBr" />
+        <result column="p_1f_HOOK_SP_TL" property="p1fHookSpTl" />
+        <result column="p_1f_HOOK_SP_ML" property="p1fHookSpMl" />
+        <result column="p_1f_HOOK_SP_BL" property="p1fHookSpBl" />
+        <result column="p_3a_CORNER_BR" property="p3aCornerBr" />
+        <result column="p_3a_CORNER_BL" property="p3aCornerBl" />
+        <result column="p_3a_CORNER_TR" property="p3aCornerTr" />
+        <result column="p_4a_GLUE_T" property="p4aGlueT" />
+        <result column="p_4b_GLUE_B" property="p4bGlueB" />
+        <result column="p_5c_WAVINESS_CMAX" property="p5cWavinessCmax" />
+        <result column="p_7a_SW_L" property="p7aSwL" />
+        <result column="p_7a_SW_R" property="p7aSwR" />
+        <result column="p_7b_SW_T" property="p7bSwT" />
+        <result column="p_7b_SW_B" property="p7bSwB" />
+        <result column="p_8e_PLATEAU_CUTTER_R" property="p8ePlateauCutterR" />
+        <result column="p_8f_PLATEAU_CUTTER_B" property="p8fPlateauCutterB" />
+        <result column="p_8g_PLATEAU_CUTTER_C" property="p8gPlateauCutterC" />
+        <result column="p_8h_PLATEAU_CUTTER_MEAN" property="p8hPlateauCutterMean" />
+        <result column="p_8i_PLATEAU_STRAY_CUTTER" property="p8iPlateauStrayCutter" />
+        <result column="p_9c_RANDOM_DENTS" property="p9cRandomDents" />
+        <result column="p_9d_RANDOM_DENTS" property="p9dRandomDents" />
+        <result column="p_11a_CUTTER_POLISH" property="p11aCutterPolish" />
+        <result column="p_11b_CUTTER_TR" property="p11bCutterTr" />
+        <result column="p_11c_CUTTER_ML" property="p11cCutterMl" />
+        <result column="p_11d_CUTTER_MR" property="p11dCutterMr" />
+        <result column="p_11e_CUTTER_BL" property="p11eCutterBl" />
+        <result column="p_11f_CUTTER_BR" property="p11fCutterBr" />
+        <result column="p_11g_POLISH_TR" property="p11gPolishTr" />
+        <result column="p_11h_POLISH_ML" property="p11hPolishMl" />
+        <result column="p_11i_POLISH_MR" property="p11iPolishMr" />
+        <result column="p_11j_POLISH_BL" property="p11jPolishBl" />
+        <result column="p_11k_POLISH_BR" property="p11kPolishBr" />
+        <result column="p_11l_CUTTER_MEAN" property="p11lCutterMean" />
+        <result column="p_11m_POLISH_MEAN" property="p11mPolishMean" />
+        <result column="p_12a_FLATNESS" property="p12aFlatness" />
+        <result column="p_12p_FLATNESS" property="p12pFlatness" />
+        <result column="p_20a_Length" property="p20aLength" />
+        <result column="p_20b_Width" property="p20bWidth" />
+        <result column="submit_date" property="submitDate" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfControlStandardStatusMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfControlStandardStatus">
+        <id column="id" property="id" />
+        <result column="routing_id" property="routingId" />
+        <result column="control_standrad_id" property="controlStandradId" />
+        <result column="data_status" property="dataStatus" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="audit_id" property="auditId" />
+        <result column="batch_uuid" property="batchUuid" />
+        <result column="factory_id" property="factoryId" />
+        <result column="line_body_id" property="lineBodyId" />
+        <result column="project_id" property="projectId" />
+        <result column="workshop_section_id" property="workshopSectionId" />
+        <result column="workstation_id" property="workstationId" />
+    </resultMap>
+
+</mapper>

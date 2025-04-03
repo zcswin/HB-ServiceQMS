@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfGroupCloseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfGroupClose">
+        <id column="id" property="id" />
+        <result column="group_id" property="groupId" />
+        <result column="close_num" property="closeNum" />
+        <result column="open_num" property="openNum" />
+        <result column="close_rate" property="closeRate" />
+        <result column="test_time" property="testTime" />
+        <result column="create_time" property="createTime" />
+        <result column="factory" property="factory" />
+        <result column="process" property="process" />
+        <result column="project" property="project" />
+        <result column="linebody" property="linebody" />
+        <result column="test_type" property="testType" />
+        <result column="day_or_night" property="dayOrNight" />
+    </resultMap>
+
+</mapper>

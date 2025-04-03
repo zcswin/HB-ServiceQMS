@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfDataSetMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfDataSet">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="alias" property="alias" />
+        <result column="data_type" property="dataType" />
+        <result column="resource_id" property="resourceId" />
+        <result column="parent_id" property="parentId" />
+        <result column="has_child" property="hasChild" />
+        <result column="order" property="order" />
+        <result column="show_on_pc" property="showOnPc" />
+        <result column="hidden_in_browse" property="hiddenInBrowse" />
+        <result column="show_on_phone" property="showOnPhone" />
+        <result column="show_on_pad" property="showOnPad" />
+        <result column="data_desc" property="dataDesc" />
+        <result column="detect_child" property="detectChild" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

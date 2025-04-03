@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMachineMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMachine">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="linebody_id" property="linebodyId" />
+        <result column="create_time" property="createTime" />
+        <result column="factory_code" property="factoryCode" />
+        <result column="workshop_code" property="workshopCode" />
+        <result column="process_code" property="processCode" />
+        <result column="show_three" property="showThree" />
+        <result column="person_name" property="personName" />
+        <result column="dev_ip" property="devIp" />
+        <result column="unit_type" property="unitType" />
+        <result column="person_code" property="personCode" />
+    </resultMap>
+
+</mapper>

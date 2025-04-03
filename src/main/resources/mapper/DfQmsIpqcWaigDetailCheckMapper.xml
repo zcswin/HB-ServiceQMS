@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQmsIpqcWaigDetailCheckMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQmsIpqcWaigDetailCheck">
+        <id column="id" property="id" />
+        <result column="f_sn" property="fSn" />
+        <result column="f_big_area" property="fBigArea" />
+        <result column="f_sm_area" property="fSmArea" />
+        <result column="f_defect" property="fDefect" />
+        <result column="f_sort" property="fSort" />
+        <result column="f_level" property="fLevel" />
+        <result column="f_standard" property="fStandard" />
+        <result column="f_zerostandard" property="fZerostandard" />
+        <result column="f_result" property="fResult" />
+        <result column="f_x" property="fX" />
+        <result column="f_y" property="fY" />
+        <result column="f_time" property="fTime" />
+        <result column="f_parent_id" property="fParentId" />
+        <result column="f_product_id" property="fProductId" />
+        <result column="is_uniwafe" property="isUniwafe" />
+    </resultMap>
+
+</mapper>

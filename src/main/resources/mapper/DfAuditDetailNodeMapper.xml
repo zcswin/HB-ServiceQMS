@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAuditDetailNodeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAuditDetailNode">
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="process_node" property="processNode" />
+        <result column="create_time" property="createTime" />
+        <result column="result" property="result" />
+    </resultMap>
+
+</mapper>

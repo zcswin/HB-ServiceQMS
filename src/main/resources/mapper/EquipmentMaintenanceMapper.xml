@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.EquipmentMaintenanceMapper">
+
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.EquipmentMaintenance">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="triggerTime" column="trigger_time" jdbcType="DATE"/>
+            <result property="process" column="process" jdbcType="VARCHAR"/>
+            <result property="machineNumber" column="machine_number" jdbcType="VARCHAR"/>
+            <result property="problemDetail" column="problem_detail" jdbcType="VARCHAR"/>
+            <result property="maintenanceSuggestion" column="maintenance_suggestion" jdbcType="VARCHAR"/>
+            <result property="dataSource" column="data_source" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,trigger_time,process,
+        machine_number,problem_detail,maintenance_suggestion,
+        data_source,wave_graph1,wave_graph2
+    </sql>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQmsIpqcFlawLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQmsIpqcFlawLog">
+        <id column="id" property="id" />
+        <result column="bar_code" property="barCode" />
+        <result column="process" property="process" />
+        <result column="flaw_name" property="flawName" />
+        <result column="fa" property="fa" />
+        <result column="ca" property="ca" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

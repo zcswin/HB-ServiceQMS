@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTeRorMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTeRor">
+        <id column="id" property="id" />
+        <result column="test_code" property="testCode" />
+        <result column="submit_date" property="submitDate" />
+        <result column="machine_code" property="machineCode" />
+        <result column="operator" property="operator" />
+        <result column="test_date" property="testDate" />
+        <result column="Sample_id" property="sampleId" />
+        <result column="SN2D_code" property="sn2dCode" />
+        <result column="SF" property="sf" />
+        <result column="InstronMachineCode" property="InstronMachineCode" />
+        <result column="Displacement" property="Displacement" />
+        <result column="BreakingLoad" property="BreakingLoad" />
+        <result column="BreakingStress" property="BreakingStress" />
+        <result column="ActualThickness" property="ActualThickness" />
+        <result column="CS1" property="cs1" />
+        <result column="DOL1" property="dol1" />
+        <result column="CS2" property="cs2" />
+        <result column="DOL2" property="dol2" />
+        <result column="CT" property="ct" />
+        <result column="FaceUp" property="FaceUp" />
+        <result column="result" property="result" />
+    </resultMap>
+
+</mapper>

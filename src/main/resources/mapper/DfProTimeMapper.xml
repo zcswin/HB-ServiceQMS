@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfProTimeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfProTime">
+        <id column="id" property="id" />
+        <result column="product" property="product" />
+        <result column="process" property="process" />
+        <result column="standard" property="standard" />
+        <result column="upper_limit" property="upperLimit" />
+        <result column="lower_limit" property="lowerLimit" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

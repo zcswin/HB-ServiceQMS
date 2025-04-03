@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfIqcDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfIqcDetail">
+        <id column="id" property="id" />
+        <result column="income_date" property="incomeDate" />
+        <result column="material_code" property="materialCode" />
+        <result column="material_name" property="materialName" />
+        <result column="specification" property="specification" />
+        <result column="supplier" property="supplier" />
+        <result column="process_used" property="processUsed" />
+        <result column="sampling_quantity" property="samplingQuantity" />
+        <result column="appearance" property="appearance" />
+        <result column="appearance_num" property="appearanceNum" />
+        <result column="size" property="size" />
+        <result column="size_num" property="sizeNum" />
+        <result column="appearance_defect" property="appearanceDefect" />
+        <result column="size_defect" property="sizeDefect" />
+        <result column="ng_method" property="ngMethod" />
+        <result column="remarks" property="remarks" />
+        <result column="create_time" property="createTime" />
+        <result column="type" property="type" />
+        <result column="factory" property="factory" />
+        <result column="material_type" property="materialType" />
+    </resultMap>
+</mapper>

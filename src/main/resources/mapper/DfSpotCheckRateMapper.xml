@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSpotCheckRateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSpotCheckRate">
+        <id column="id" property="id" />
+        <result column="factory_id" property="factoryId" />
+        <result column="check_rate" property="checkRate" />
+        <result column="type" property="type" />
+        <result column="check_type" property="checkType" />
+        <result column="check_year" property="checkYear" />
+        <result column="check_month" property="checkMonth" />
+        <result column="pass_num" property="passNum" />
+        <result column="fail_num" property="failNum" />
+        <result column="create_man" property="createMan" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

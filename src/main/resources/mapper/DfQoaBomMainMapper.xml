@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQoaBomMainMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQoaBomMain">
+        <id column="id" property="id" />
+        <result column="industrial_park" property="industrialPark" />
+        <result column="project" property="project" />
+        <result column="production_phase" property="productionPhase" />
+        <result column="color" property="color" />
+        <result column="drawing_type" property="drawingType" />
+        <result column="drawing_version_name" property="drawingVersionName" />
+        <result column="shipping_qty" property="shippingQty" />
+        <result column="sale_place" property="salePlace" />
+        <result column="distribution_plant" property="distributionPlant" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

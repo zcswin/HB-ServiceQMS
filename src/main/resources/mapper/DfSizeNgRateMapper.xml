@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSizeNgRateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSizeNgRate">
+        <id column="id" property="id" />
+        <result column="appear_length1" property="appearLength1" />
+        <result column="appear_length2" property="appearLength2" />
+        <result column="appear_length3" property="appearLength3" />
+        <result column="appear_width1" property="appearWidth1" />
+        <result column="appear_width2" property="appearWidth2" />
+        <result column="appear_width3" property="appearWidth3" />
+        <result column="mi_hole_diameter" property="miHoleDiameter" />
+        <result column="mi_hole_roundness" property="miHoleRoundness" />
+        <result column="mi_hole_center_distance_x" property="miHoleCenterDistanceX" />
+        <result column="mi_hole_center_distance_y" property="miHoleCenterDistanceY" />
+        <result column="db_hole_diameter" property="dbHoleDiameter" />
+        <result column="db_hole_roundness" property="dbHoleRoundness" />
+        <result column="db_hole_center_distance_x" property="dbHoleCenterDistanceX" />
+        <result column="db_hole_center_distance_y" property="dbHoleCenterDistanceY" />
+        <result column="s_hole_diameter" property="sHoleDiameter" />
+        <result column="s_hole_roundness" property="sHoleRoundness" />
+        <result column="s_hole_center_distance_x" property="sHoleCenterDistanceX" />
+        <result column="s_hole_center_distance_y" property="sHoleCenterDistanceY" />
+        <result column="mic_hole_diameter" property="micHoleDiameter" />
+        <result column="mic_hole_roundness" property="micHoleRoundness" />
+        <result column="mic_hole_center_distance_x" property="micHoleCenterDistanceX" />
+        <result column="mic_hole_center_distance_y" property="micHoleCenterDistanceY" />
+        <result column="test_time" property="testTime" />
+        <result column="factory" property="factory" />
+        <result column="project" property="project" />
+        <result column="process" property="process" />
+        <result column="linebody" property="linebody" />
+        <result column="day_or_night" property="dayOrNight" />
+        <result column="test_man" property="testMan" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

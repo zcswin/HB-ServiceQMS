@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfInventoryUseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfInventoryUse">
+        <id column="id" property="id" />
+        <result column="parent_id" property="parentId" />
+        <result column="quantity" property="quantity" />
+        <result column="date_used" property="dateUsed" />
+        <result column="use_man" property="useMan" />
+        <result column="use_man_code" property="useManCode" />
+        <result column="purpose" property="purpose" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

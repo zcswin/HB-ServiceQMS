@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacPositionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacPosition">
+        <id column="id" property="id" />
+        <result column="Type_Data" property="typeData" />
+        <result column="MachineCode" property="MachineCode" />
+        <result column="unit" property="unit" />
+        <result column="x" property="x" />
+        <result column="y" property="y" />
+        <result column="z" property="z" />
+        <result column="pub_time" property="pubTime" />
+    </resultMap>
+
+</mapper>

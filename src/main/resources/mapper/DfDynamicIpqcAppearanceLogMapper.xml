@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfDynamicIpqcAppearanceLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfDynamicIpqcAppearanceLog">
+        <id column="id" property="id" />
+        <result column="machine_code" property="machineCode" />
+        <result column="process" property="process" />
+        <result column="project" property="project" />
+        <result column="status" property="status" />
+        <result column="duration_time" property="durationTime" />
+        <result column="start_date" property="startDate" />
+        <result column="end_date" property="endDate" />
+        <result column="create_time" property="createTime" />
+        <result column="status_color" property="statusColor" />
+    </resultMap>
+
+</mapper>

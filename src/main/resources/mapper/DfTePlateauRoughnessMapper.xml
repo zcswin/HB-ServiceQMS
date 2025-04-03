@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTePlateauRoughnessMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTePlateauRoughness">
+        <result column="vendor" property="vendor" />
+        <result column="site" property="site" />
+        <result column="project" property="project" />
+        <result column="phase" property="phase" />
+        <result column="color" property="color" />
+        <result column="test_name" property="testName" />
+        <result column="process_recipe" property="processRecipe" />
+        <result column="process_fixture" property="processFixture" />
+        <result column="measurement_device" property="measurementDevice" />
+        <result column="part_id" property="partId" />
+        <result column="test_location" property="testLocation" />
+        <result column="logo_step_height" property="logoStepHeight" />
+        <result column="logo_edge_crispness" property="logoEdgeCrispness" />
+        <result column="spec" property="spec" />
+        <result column="sq" property="sq" />
+        <result column="ssk" property="ssk" />
+        <result column="sku" property="sku" />
+        <result column="sal" property="sal" />
+        <result column="sk" property="sk" />
+        <result column="spk" property="spk" />
+        <result column="svk" property="svk" />
+        <result column="smr1" property="smr1" />
+        <result column="smr2" property="smr2" />
+        <result column="sdq" property="sdq" />
+        <result column="sdr" property="sdr" />
+        <result column="ssc" property="ssc" />
+        <result column="length1" property="length1" />
+        <result column="length2" property="length2" />
+        <result column="number_of_motifs1" property="numberOfMotifs1" />
+        <result column="height_mean1" property="heightMean1" />
+        <result column="area_mean1" property="areaMean1" />
+        <result column="pitch_mean1" property="pitchMean1" />
+        <result column="mean_diameter_mean1" property="meanDiameterMean1" />
+        <result column="number_of_motifs2" property="numberOfMotifs2" />
+        <result column="height_mean2" property="heightMean2" />
+        <result column="area_mean2" property="areaMean2" />
+        <result column="pitch_mean2" property="pitchMean2" />
+        <result column="mean_diameter_mean2" property="meanDiameterMean2" />
+        <result column="result" property="result" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

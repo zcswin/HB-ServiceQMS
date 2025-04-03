@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfEmdDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfEmdDetail">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="sn" property="sn" />
+        <result column="check_type" property="checkType" />
+        <result column="type" property="type" />
+        <result column="factory" property="factory" />
+        <result column="line_body" property="lineBody" />
+        <result column="project" property="project" />
+        <result column="color" property="color" />
+        <result column="work_position" property="workPosition" />
+        <result column="work_result" property="workResult" />
+        <result column="work_value" property="workValue" />
+        <result column="work_change" property="workChange" />
+    </resultMap>
+
+</mapper>

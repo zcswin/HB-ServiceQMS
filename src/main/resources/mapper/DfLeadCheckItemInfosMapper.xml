@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfLeadCheckItemInfosMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfLeadCheckItemInfos">
+        <id column="id" property="id" />
+        <result column="check_result" property="checkResult" />
+        <result column="check_time" property="checkTime" />
+        <result column="check_value" property="checkValue" />
+        <result column="item_name" property="itemName" />
+        <result column="lsl" property="lsl" />
+        <result column="standard_value" property="standardValue" />
+        <result column="usl" property="usl" />
+        <result column="check_id" property="checkId" />
+        <result column="check_type" property="checkType" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

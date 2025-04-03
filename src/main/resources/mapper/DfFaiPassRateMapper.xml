@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfFaiPassRateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfFaiPassRate">
+        <id column="id" property="id" />
+        <result column="factory" property="factory" />
+        <result column="process" property="process" />
+        <result column="linebody" property="linebody" />
+        <result column="project" property="project" />
+        <result column="day_or_night" property="dayOrNight" />
+        <result column="all_mac_num" property="allMacNum" />
+        <result column="open_mac_num" property="openMacNum" />
+        <result column="fai_open_num" property="faiOpenNum" />
+        <result column="fai_pass_num" property="faiPassNum" />
+        <result column="open_mac_rate" property="openMacRate" />
+        <result column="fai_pass_rate" property="faiPassRate" />
+        <result column="fai_open_rate" property="faiOpenRate" />
+        <result column="test_type" property="testType" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

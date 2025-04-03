@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAoiDecideLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAoiDecideLog">
+        <id column="id" property="id" />
+        <result column="aoi_result" property="aoiResult" />
+        <result column="qc_result" property="qcResult" />
+        <result column="qc_time" property="qcTime" />
+        <result column="qc_user_code" property="qcUserCode" />
+        <result column="qc_user_name" property="qcUserName" />
+        <result column="machine_code" property="machineCode" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

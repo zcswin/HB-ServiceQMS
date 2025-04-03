@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfProInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfProInfo">
+        <id column="ID" property="id" />
+        <result column="Code" property="Code" />
+        <result column="Name" property="Name" />
+        <result column="CreateTime" property="CreateTime" />
+        <result column="CreateUser" property="CreateUser" />
+        <result column="UpdateTime" property="UpdateTime" />
+        <result column="UpdateUser" property="UpdateUser" />
+        <result column="IsDelete" property="IsDelete" />
+    </resultMap>
+
+</mapper>

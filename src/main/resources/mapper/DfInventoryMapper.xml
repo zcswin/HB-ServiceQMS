@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfInventoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfInventory">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="spare_type" property="spareType" />
+        <result column="factory_code" property="factoryCode" />
+        <result column="line_body_code" property="lineBodyCode" />
+        <result column="quantity" property="quantity" />
+        <result column="unit" property="unit" />
+        <result column="available_time" property="availableTime" />
+        <result column="replenishment_cycle" property="replenishmentCycle" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

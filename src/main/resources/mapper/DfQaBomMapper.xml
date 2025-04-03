@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQaBomMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQaBom">
+        <id column="id" property="id" />
+        <result column="project_model" property="projectModel" />
+        <result column="stage" property="stage" />
+        <result column="config" property="config" />
+        <result column="confirm_status" property="confirmStatus" />
+        <result column="flow_id" property="flowId" />
+        <result column="color" property="color" />
+        <result column="qa_bom" property="qaBom" />
+        <result column="lower_drawings" property="lowerDrawings" />
+        <result column="convert_drawings" property="convertDrawings" />
+        <result column="outer_dfm" property="outerDfm" />
+        <result column="inner_dfm" property="innerDfm" />
+        <result column="outer_qcp" property="outerQcp" />
+        <result column="inner_qcp_size" property="innerQcpSize" />
+        <result column="inner_qcp_appearance" property="innerQcpAppearance" />
+        <result column="material_bom" property="materialBom" />
+        <result column="ers" property="ers" />
+        <result column="process_mil" property="processMil" />
+        <result column="factory_check" property="factoryCheck" />
+        <result column="manufacturing_order" property="manufacturingOrder" />
+        <result column="first_report" property="firstReport" />
+        <result column="first_confirm" property="firstConfirm" />
+    </resultMap>
+
+</mapper>

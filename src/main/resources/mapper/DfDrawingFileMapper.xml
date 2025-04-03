@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfDrawingFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfDrawingFile">
+        <id column="id" property="id" />
+        <result column="project" property="project" />
+        <result column="category" property="category" />
+        <result column="model" property="model" />
+        <result column="application_stage" property="applicationStage" />
+        <result column="property" property="property" />
+        <result column="change_time" property="changeTime" />
+        <result column="change_version" property="changeVersion" />
+        <result column="change_drawing_version" property="changeDrawingVersion" />
+        <result column="upload_date" property="uploadDate" />
+        <result column="upload_path" property="uploadPath" />
+        <result column="approval_time" property="approvalTime" />
+        <result column="change_content" property="changeContent" />
+        <result column="confirmor" property="confirmor" />
+        <result column="confirmor_code" property="confirmorCode" />
+        <result column="registration_time" property="registrationTime" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

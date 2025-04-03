@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfFlowDataMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfFlowData">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="flow_type" property="flowType" />
+        <result column="flow_level" property="flowLevel" />
+        <result column="data_type" property="dataType" />
+        <result column="data_id" property="dataId" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_name" property="updateName" />
+        <result column="remark" property="remark" />
+        <result column="status" property="status" />
+        <result column="flow_log" property="flowLog" />
+        <result column="flow_level_name" property="flowLevelName" />
+        <result column="valid_time" property="validTime" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="level1_read_time" property="level1ReadTime" />
+        <result column="level2_read_time" property="level2ReadTime" />
+        <result column="level3_read_time" property="level3ReadTime" />
+        <result column="level1_affirm_time" property="level1AffirmTime" />
+        <result column="level2_affirm_time" property="level2AffirmTime" />
+        <result column="level3_affirm_time" property="level3AffirmTime" />
+        <result column="level1_push_time" property="level1PushTime" />
+        <result column="level2_push_time" property="level2PushTime" />
+        <result column="level3_push_time" property="level3PushTime" />
+        <result column="next_level_user" property="nextLevelUser" />
+        <result column="now_level_user" property="nowLevelUser" />
+        <result column="level1_overtime" property="level1Overtime" />
+        <result column="level2_overtime" property="level2Overtime" />
+        <result column="level3_overtime" property="level3Overtime" />
+        <result column="now_level_user_name" property="nowLevelUserName" />
+        <result column="submit_time" property="submitTime" />
+        <result column="initiator_affirm_time" property="initiatorAffirmTime" />
+        <result column="overtime_status" property="overtimeStatus" />
+        <result column="start_timeout" property="startTimeout" />
+        <result column="read_time_max" property="readTimeMax" />
+        <result column="dispose_time_max" property="disposeTimeMax" />
+        <result column="read_name" property="readName" />
+        <result column="affirm_name" property="affirmName" />
+        <result column="submit_name" property="submitName" />
+        <result column="fa_ca_read_time" property="faCaReadTime" />
+        <result column="current_timeout_level" property="currentTimeoutLevel" />
+    </resultMap>
+
+</mapper>

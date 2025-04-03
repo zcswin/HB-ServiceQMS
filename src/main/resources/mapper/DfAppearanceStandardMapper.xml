@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAppearanceStandardMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAppearanceStandard">
+        <id column="id" property="id" />
+        <result column="model" property="model" />
+        <result column="level" property="level" />
+        <result column="project" property="project" />
+        <result column="category" property="category" />
+        <result column="area" property="area" />
+        <result column="name" property="name" />
+        <result column="definition" property="definition" />
+        <result column="test_method" property="testMethod" />
+        <result column="standard" property="standard" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfApprovalTimeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfApprovalTime">
+        <id column="id" property="id" />
+        <result column="type" property="type" />
+        <result column="level1" property="level1" />
+        <result column="level2" property="level2" />
+        <result column="level3" property="level3" />
+        <result column="level4" property="level4" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_name" property="updateName" />
+        <result column="update_code" property="updateCode" />
+    </resultMap>
+
+</mapper>

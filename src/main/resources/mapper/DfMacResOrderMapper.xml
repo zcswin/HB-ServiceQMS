@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacResOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacResOrder">
+        <id column="id" property="id" />
+        <result column="machine_code" property="machineCode" />
+        <result column="work_order_code" property="workOrderCode" />
+        <result column="process_name" property="processName" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="in_num" property="inNum" />
+        <result column="out_num" property="outNum" />
+        <result column="no_accomp_num" property="noAccompNum" />
+        <result column="ng_num" property="ngNum" />
+        <result column="ipqc_sample_num" property="ipqcSampleNum" />
+        <result column="ipqc_feed_num" property="ipqcFeedNum" />
+        <result column="waste_num" property="wasteNum" />
+        <result column="mac_num" property="macNum" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

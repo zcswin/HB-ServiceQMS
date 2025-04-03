@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMalfunctionRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMalfunctionRecord">
+        <id column="id" property="id" />
+        <result column="machine_code" property="machineCode" />
+        <result column="malfunction_type" property="malfunctionType" />
+        <result column="malfunction_cause" property="malfunctionCause" />
+        <result column="countermeasure" property="countermeasure" />
+        <result column="malfunction_time" property="malfunctionTime" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+        <result column="factory_code" property="factoryCode" />
+    </resultMap>
+
+</mapper>

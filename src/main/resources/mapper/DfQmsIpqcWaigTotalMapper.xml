@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfQmsIpqcWaigTotalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfQmsIpqcWaigTotal">
+        <id column="id" property="id" />
+        <result column="f_sn" property="fSn" />
+        <result column="f_bigpro" property="fBigpro" />
+        <result column="f_barcode" property="fBarcode" />
+        <result column="f_mac" property="fMac" />
+        <result column="f_fac" property="fFac" />
+        <result column="f_bigseq" property="fBigseq" />
+        <result column="f_seq" property="fSeq" />
+        <result column="f_type" property="fType" />
+        <result column="f_stage" property="fStage" />
+        <result column="f_line" property="fLine" />
+        <result column="f_color" property="fColor" />
+        <result column="f_test_category" property="fTestCategory" />
+        <result column="f_test_type" property="fTestType" />
+        <result column="f_test_man" property="fTestMan" />
+        <result column="f_research" property="fResearch" />
+        <result column="f_time" property="fTime" />
+        <result column="f_user" property="fUser" />
+        <result column="f_cont_frequ" property="fContFrequ" />
+        <result column="create_name" property="createName" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="create_time" property="createTime" />
+        <result column="status" property="status" />
+        <result column="affect_count" property="affectCount" />
+        <result column="category_id" property="categoryId" />
+        <result column="spot_check_count" property="spotCheckCount" />
+    </resultMap>
+
+</mapper>

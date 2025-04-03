@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSizeFailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSizeFail">
+        <id column="id" property="id" />
+        <result column="fai" property="fai" />
+        <result column="bad_type" property="badType" />
+        <result column="standard" property="standard" />
+        <result column="practical" property="practical" />
+        <result column="diff_value" property="diffValue" />
+        <result column="condition" property="condition" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

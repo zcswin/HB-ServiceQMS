@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.AgvInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.AgvInfo">
+        <id column="id" property="id" />
+        <result column="device_code" property="deviceCode" />
+        <result column="pay_load" property="payLoad" />
+        <result column="device_postion_rec" property="devicePostionRec" />
+        <result column="device_position" property="devicePosition" />
+        <result column="battery" property="battery" />
+        <result column="device_name" property="deviceName" />
+        <result column="device_status" property="deviceStatus" />
+        <result column="state" property="state" />
+        <result column="oritation" property="oritation" />
+        <result column="speed" property="speed" />
+        <result column="create_time" property="createTime" />
+        <result column="x" property="x" />
+        <result column="y" property="y" />
+    </resultMap>
+
+</mapper>

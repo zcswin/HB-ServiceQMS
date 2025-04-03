@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAuditDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAuditDetail">
+        <id column="id" property="id" />
+        <result column="project_name" property="projectName" />
+        <result column="department" property="department" />
+        <result column="ipqc_number" property="ipqcNumber" />
+        <result column="question_name" property="questionName" />
+        <result column="report_man" property="reportMan" />
+        <result column="report_time" property="reportTime" />
+        <result column="control_standard" property="controlStandard" />
+        <result column="affect_num" property="affectNum" />
+        <result column="affect_mac" property="affectMac" />
+        <result column="decision_level" property="decisionLevel" />
+        <result column="occurrence_time" property="occurrenceTime" />
+        <result column="responsible" property="responsible" />
+        <result column="responsible_id" property="responsibleId" />
+        <result column="responsible2" property="responsible2" />
+        <result column="responsible_id2" property="responsibleId2" />
+        <result column="responsible3" property="responsible3" />
+        <result column="responsible_id3" property="responsibleId3" />
+        <result column="responsible4" property="responsible4" />
+        <result column="responsible_id4" property="responsibleId4" />
+        <result column="handling_sug" property="handlingSug" />
+        <result column="remark" property="remark" />
+        <result column="parent_id" property="parentId" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="is_faca" property="isFaca" />
+        <result column="scene_practical" property="scenePractical" />
+        <result column="question_type" property="questionType" />
+        <result column="impact_type" property="impactType" />
+        <result column="factory_id" property="factoryId" />
+        <result column="procedure_id" property="procedureId" />
+        <result column="line_id" property="lineId" />
+        <result column="workshop_id" property="workshopId" />
+        <result column="workstation_id" property="workstationId" />
+        <result column="project_id" property="projectId" />
+        <result column="model_id" property="modelId" />
+        <result column="problem_detial" property="problemDetial" />
+        <result column="lines_time" property="linesTime" />
+        <result column="received_time" property="receivedTime" />
+        <result column="timeout_duration" property="timeoutDuration" />
+        <result column="close" property="close" />
+        <result column="close_time" property="closeTime" />
+        <result column="rfid" property="rfid" />
+        <result column="ng_or_ok" property="ngOrOk" />
+        <result column="create_name" property="createName" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="request_id" property="requestId" />
+        <result column="lcbh" property="lcbh" />
+        <result column="department_liable" property="departmentLiable" />
+        <result column="handing_option" property="handingOption" />
+        <result column="fa" property="fa" />
+        <result column="ca" property="ca" />
+        <result column="eventlevel1" property="eventlevel1" />
+        <result column="eventlevel2" property="eventlevel2" />
+        <result column="eventlevel3" property="eventlevel3" />
+        <result column="eventlevel4" property="eventlevel4" />
+        <result column="kpi" property="kpi" />
+        <result column="oa_uuid" property="oaUuid" />
+        <result column="mes_uuid" property="mesUuid" />
+        <result column="is_enabled" property="isEnabled" />
+        <result column="jdclsj2" property="jdclsj2" />
+        <result column="jdclsj3" property="jdclsj3" />
+        <result column="jdclsj4" property="jdclsj4" />
+        <result column="jdclsj5" property="jdclsj5" />
+        <result column="sqr" property="sqr" />
+        <result column="new_requestname" property="newRequestname" />
+        <result column="bzfa" property="bzfa" />
+        <result column="bzca" property="bzca" />
+        <result column="factory" property="factory" />
+        <result column="line" property="line" />
+        <result column="project" property="project" />
+        <result column="workshop" property="workshop" />
+        <result column="workstation" property="workstation" />
+        <result column="process" property="process" />
+        <result column="ipqc_url" property="ipqcUrl" />
+        <result column="rep_user_code" property="repUserCode" />
+        <result column="bzfaz" property="bzfaz" />
+        <result column="bzcaz" property="bzcaz" />
+        <result column="control_standard_id" property="controlStandardId" />
+        <result column="oa_num" property="oaNum" />
+        <result column="end_time" property="endTime" />
+    </resultMap>
+
+</mapper>

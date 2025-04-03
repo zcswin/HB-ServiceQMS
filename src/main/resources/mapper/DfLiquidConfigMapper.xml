@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfLiquidConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfLiquidConfig">
+        <id column="id" property="id" />
+        <result column="factory_id" property="factoryId" />
+        <result column="classes" property="classes" />
+        <result column="model" property="model" />
+        <result column="material" property="material" />
+        <result column="feed_time" property="feedTime" />
+        <result column="discharge_time" property="dischargeTime" />
+        <result column="work_user" property="workUser" />
+        <result column="production_quantity" property="productionQuantity" />
+        <result column="potion_tank_code" property="potionTankCode" />
+        <result column="process_time" property="processTime" />
+        <result column="temperature" property="temperature" />
+        <result column="batch" property="batch" />
+        <result column="silk_number" property="silkNumber" />
+        <result column="config_message" property="configMessage" />
+    </resultMap>
+
+</mapper>

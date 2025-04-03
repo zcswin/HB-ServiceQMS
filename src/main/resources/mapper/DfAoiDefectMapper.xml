@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAoiDefectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAoiDefect">
+        <id column="id" property="id" />
+        <result column="frameid" property="frameid" />
+        <result column="defectid" property="defectid" />
+        <result column="classid" property="classid" />
+        <result column="featurevalues" property="featurevalues" />
+        <result column="AOIxcenter" property="AOIxcenter" />
+        <result column="AOIycenter" property="AOIycenter" />
+        <result column="attribute" property="attribute" />
+        <result column="severityid" property="severityid" />
+        <result column="qualityid" property="qualityid" />
+        <result column="RE_result" property="reResult" />
+        <result column="RE_Time" property="reTime" />
+        <result column="aoi_count" property="aoiCount" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="update_name" property="updateName" />
+        <result column="batch_code" property="batchCode" />
+        <result column="channelkey" property="channelkey" />
+        <result column="imageid" property="imageid" />
+        <result column="image_url" property="imageUrl" />
+        <result column="base64str" property="base64str" />
+    </resultMap>
+
+</mapper>

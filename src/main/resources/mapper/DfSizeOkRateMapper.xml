@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSizeOkRateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSizeOkRate">
+        <id column="id" property="id" />
+        <result column="process" property="process" />
+        <result column="ok_num" property="okNum" />
+        <result column="all_num" property="allNum" />
+        <result column="ok_rate" property="okRate" />
+        <result column="create_time" property="createTime" />
+        <result column="day_or_night" property="dayOrNight" />
+    </resultMap>
+
+</mapper>

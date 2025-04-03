@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfColorStandardMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfColorStandard">
+        <id column="id" property="id" />
+        <result column="model" property="model" />
+        <result column="color" property="color" />
+        <result column="test_mode" property="testMode" />
+        <result column="p2_sand_area" property="p2SandArea" />
+        <result column="evt_sand_area" property="evtSandArea" />
+        <result column="p2_gloss" property="p2Gloss" />
+        <result column="evt_gloss" property="evtGloss" />
+        <result column="p2_remarks" property="p2Remarks" />
+        <result column="evt_remarks" property="evtRemarks" />
+    </resultMap>
+
+</mapper>

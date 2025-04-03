@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSizeContRelationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSizeContRelation">
+        <id column="id" property="id" />
+        <result column="ipqc_name" property="ipqcName" />
+        <result column="name" property="name" />
+        <result column="type" property="type" />
+        <result column="qcp_usl" property="qcpUsl" />
+        <result column="qcp_standard" property="qcpStandard" />
+        <result column="qcp_lsl" property="qcpLsl" />
+        <result column="inner_usl" property="innerUsl" />
+        <result column="inner_standard" property="innerStandard" />
+        <result column="inner_lsl" property="innerLsl" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="process" property="process" />
+        <result column="project" property="project" />
+    </resultMap>
+
+</mapper>

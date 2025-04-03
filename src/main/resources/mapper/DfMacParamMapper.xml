@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacParamMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacParam">
+        <result column="workshopId" property="workshopId" />
+        <result column="_id" property="id" />
+        <result column="MachineID" property="MachineID" />
+        <result column="MachineCode" property="MachineCode" />
+        <result column="MachineFactory" property="MachineFactory" />
+        <result column="StatusID" property="StatusID" />
+        <result column="StatusMsg" property="StatusMsg" />
+        <result column="Old_StatusID" property="oldStatusid" />
+        <result column="Old_StatusMsg" property="oldStatusmsg" />
+        <result column="Mode" property="Mode" />
+        <result column="Feedrate" property="Feedrate" />
+        <result column="SpLoad" property="SpLoad" />
+        <result column="SvloadX" property="SvloadX" />
+        <result column="SvloadY" property="SvloadY" />
+        <result column="SvloadZ" property="SvloadZ" />
+        <result column="SpindleSpeed" property="SpindleSpeed" />
+        <result column="AbsoluteCoordinateX" property="AbsoluteCoordinateX" />
+        <result column="AbsoluteCoordinateY" property="AbsoluteCoordinateY" />
+        <result column="AbsoluteCoordinateZ" property="AbsoluteCoordinateZ" />
+        <result column="MachineCoordinateX" property="MachineCoordinateX" />
+        <result column="MachineCoordinateY" property="MachineCoordinateY" />
+        <result column="MachineCoordinateZ" property="MachineCoordinateZ" />
+        <result column="RelativeCoordinateX" property="RelativeCoordinateX" />
+        <result column="RelativeCoordinateY" property="RelativeCoordinateY" />
+        <result column="RelativeCoordinateZ" property="RelativeCoordinateZ" />
+        <result column="NumberProgram_Main" property="numberprogramMain" />
+        <result column="NumberProgram_Running" property="numberprogramRunning" />
+        <result column="FileProgram_Main" property="fileprogramMain" />
+        <result column="FileProgram_Running" property="fileprogramRunning" />
+        <result column="ProductNum" property="ProductNum" />
+        <result column="CuttingTime" property="CuttingTime" />
+        <result column="PowerOnTime" property="PowerOnTime" />
+        <result column="OperatingTime" property="OperatingTime" />
+        <result column="OperatingTimePreProduct" property="OperatingTimePreProduct" />
+        <result column="LubeOverLoad" property="LubeOverLoad" />
+        <result column="CoolantOverLoad" property="CoolantOverLoad" />
+        <result column="SpindleCoolantOverLoad" property="SpindleCoolantOverLoad" />
+        <result column="EmergencyStop" property="EmergencyStop" />
+        <result column="IndicatorLight" property="IndicatorLight" />
+        <result column="WorkLight" property="WorkLight" />
+        <result column="Lube" property="Lube" />
+        <result column="Coolant" property="Coolant" />
+        <result column="HolderOne" property="HolderOne" />
+        <result column="HolderTwo" property="HolderTwo" />
+        <result column="DoorLock" property="DoorLock" />
+        <result column="VacuumOutput" property="VacuumOutput" />
+        <result column="VacuumPluseOutput" property="VacuumPluseOutput" />
+        <result column="FourthAxisLock" property="FourthAxisLock" />
+        <result column="Renishaw" property="Renishaw" />
+        <result column="JV" property="jv" />
+        <result column="ROV" property="rov" />
+        <result column="SPOV" property="spov" />
+        <result column="CurToolNum" property="CurToolNum" />
+        <result column="NUMOFTOOL" property="numoftool" />
+        <result column="quality" property="quality" />
+        <result column="CreateTime" property="CreateTime" />
+        <result column="CreateDate" property="CreateDate" />
+        <result column="CreateHour" property="CreateHour" />
+    </resultMap>
+
+</mapper>

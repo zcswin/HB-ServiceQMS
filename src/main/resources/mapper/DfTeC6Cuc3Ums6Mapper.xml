@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfTeC6Cuc3Ums6Mapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfTeC6Cuc3Ums6">
+        <id column="id" property="id" />
+        <result column="platform_length" property="platformLength" />
+        <result column="platform_width" property="platformWidth" />
+        <result column="platform_center_X" property="platformCenterX" />
+        <result column="platform_center_Y" property="platformCenterY" />
+        <result column="platform_left_margin" property="platformLeftMargin" />
+        <result column="platform_left_margin2" property="platformLeftMargin2" />
+        <result column="platform_top_margin" property="platformTopMargin" />
+        <result column="platform_top_margin2" property="platformTopMargin2" />
+        <result column="longside_chamfer" property="longsideChamfer" />
+        <result column="F03" property="f03" />
+        <result column="P1" property="p1" />
+        <result column="P2" property="p2" />
+        <result column="P3" property="p3" />
+        <result column="P4" property="p4" />
+        <result column="P5" property="p5" />
+        <result column="thickness_range" property="thicknessRange" />
+        <result column="machine_code" property="machineCode" />
+        <result column="test_result" property="testResult" />
+        <result column="machine_status" property="machineStatus" />
+        <result column="result" property="result" />
+        <result column="indexing" property="indexing" />
+        <result column="test_time" property="testTime" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

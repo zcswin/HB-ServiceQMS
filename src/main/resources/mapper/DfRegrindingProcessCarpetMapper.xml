@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfRegrindingProcessCarpetMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfRegrindingProcessCarpet">
+        <id column="id" property="id" />
+        <result column="month" property="month" />
+        <result column="classess" property="classess" />
+        <result column="date" property="date" />
+        <result column="machine_id" property="machineId" />
+        <result column="carpet" property="carpet" />
+        <result column="operator" property="operator" />
+        <result column="confirmer" property="confirmer" />
+        <result column="remark" property="remark" />
+        <result column="classess2" property="classess2" />
+        <result column="date2" property="date2" />
+        <result column="machine_id2" property="machineId2" />
+        <result column="carpet2" property="carpet2" />
+        <result column="operator2" property="operator2" />
+        <result column="confirmer2" property="confirmer2" />
+        <result column="remark2" property="remark2" />
+    </resultMap>
+
+</mapper>

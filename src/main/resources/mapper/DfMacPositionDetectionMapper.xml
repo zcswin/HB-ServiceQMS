@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacPositionDetectionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacPositionDetection">
+        <id column="ID" property="id" />
+        <result column="DetectResultID" property="DetectResultID" />
+        <result column="TwoDimensionCode" property="TwoDimensionCode" />
+        <result column="MachineCode" property="MachineCode" />
+        <result column="CheckEquCode" property="CheckEquCode" />
+        <result column="Inspector" property="Inspector" />
+        <result column="ProductCode" property="ProductCode" />
+        <result column="Process" property="Process" />
+        <result column="Positon" property="Positon" />
+        <result column="StandardValue" property="StandardValue" />
+        <result column="UpperLimit" property="UpperLimit" />
+        <result column="LowerLimit" property="LowerLimit" />
+        <result column="DetectionValue" property="DetectionValue" />
+        <result column="CompValue" property="CompValue" />
+        <result column="ToolCode" property="ToolCode" />
+        <result column="DCode" property="DCode" />
+        <result column="ToolFlag" property="ToolFlag" />
+        <result column="CreateTime" property="CreateTime" />
+        <result column="CreateUser" property="CreateUser" />
+        <result column="UpdateTime" property="UpdateTime" />
+        <result column="UpdateUser" property="UpdateUser" />
+        <result column="IsDelete" property="IsDelete" />
+        <result column="CompRatio" property="CompRatio" />
+        <result column="TrendValue" property="TrendValue" />
+        <result column="CheckResult" property="CheckResult" />
+        <result column="CheckType" property="CheckType" />
+    </resultMap>
+
+</mapper>

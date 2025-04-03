@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSizeContStandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSizeContStand">
+        <id column="id" property="id" />
+        <result column="test_item" property="testItem" />
+        <result column="standard" property="standard" />
+        <result column="upper_toler" property="upperToler" />
+        <result column="lower_toler" property="lowerToler" />
+        <result column="upper_limit" property="upperLimit" />
+        <result column="lower_limit" property="lowerLimit" />
+        <result column="isola_upper_limit" property="isolaUpperLimit" />
+        <result column="isola_lower_limit" property="isolaLowerLimit" />
+        <result column="mean" property="mean" />
+        <result column="cpk" property="cpk" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="factory" property="factory" />
+        <result column="line" property="line" />
+        <result column="process" property="process" />
+        <result column="fai" property="fai" />
+        <result column="key_point" property="keyPoint" />
+    </resultMap>
+
+</mapper>

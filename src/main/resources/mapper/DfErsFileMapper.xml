@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfErsFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfErsFile">
+        <id column="id" property="id" />
+        <result column="file_apn" property="fileApn" />
+        <result column="ers_file_name" property="ersFileName" />
+        <result column="version" property="version" />
+        <result column="brawing_code_version" property="brawingCodeVersion" />
+        <result column="update_description" property="updateDescription" />
+        <result column="update_date" property="updateDate" />
+        <result column="edit_man" property="editMan" />
+        <result column="list_inspection" property="listInspection" />
+        <result column="msop" property="msop" />
+        <result column="factory_name" property="factoryName" />
+        <result column="factory_code" property="factoryCode" />
+        <result column="create_time" property="createTime" />
+        <result column="create_name" property="createName" />
+    </resultMap>
+
+</mapper>

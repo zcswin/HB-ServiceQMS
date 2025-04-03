@@ -1,0 +1,267 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initial-size: 5
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    #    url: jdbc:mysql://192.168.1.24:3306/df_demo
+    url: jdbc:mysql://localhost:3306/boen_qms
+    #    url: jdbc:mysql://192.168.15.6:3306/df_demo_04
+    username: root
+    #    password: heshan8386
+    password: 123456
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  application:
+    name: HB-QMS-Provider
+  activemq:
+    broker-url: tcp://localhost:61616  #你activeMQ的ip和端口号
+    user: admin   #activeMq账号
+    password: admin #activeMq密码
+    #    queue-name: Status_Iot_Machines_J10-1_J10-1-4 #队列名
+    queue-name: Report_ProductGague_J10-1_J10-1-4	 #队列名
+    failover: (tcp://localhost:61616,tcp://localhost:61616,tcp://localhost:61616,tcp://localhost:61616,tcp://localhost:61617)
+    #    failover: (tcp://localhost:61616?wireFormat.maxInactivityDuration=0)&maxReconnectDelay=100&maxReconnectAttempts=1&timeout=2000
+    pool:
+      enabled: true       #连接池启动
+      max-connections: 100 #最大连接数
+  jtmq:
+    broker-url: tcp://localhost:61616  #你activeMQ的ip和端口号
+    user: admin   #activeMq账号
+    password: admin #activeMq密码
+    #    queue-name: Status_Iot_Machines_J10-1_J10-1-4 #队列名
+    #    failover: (tcp://10.77.30.217:61616,tcp://10.77.30.217:61616,tcp://10.77.30.217:61616,tcp://10.77.30.217:61616,tcp://10.77.30.217:61616)
+    pool:
+      enabled: true       #连接池启动
+      max-connections: 100 #最大连接数
+  jms:
+    pub-sub-domain: true
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+logging:
+  config: classpath:logback-spring.xml
+mybatis-plus:
+  mapper-locations: classpath*:xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: ${APP_PORT:15005}
+
+config:
+  factoryId: J10-1
+
+topic1: Status_Iot_Machines_J10-1_J10-1-4
+topic2: Param_Iot_Machines_J10-1_J10-1-4
+topic3: ToolHD_Iot_Machines_J10-1_J10-1-4
+topic4: size_data
+
+topicSize: Report_ProductGague_J10-1_J10-1-4
+sizeStatusTopic: size_status_data
+topic4Sw: 0
+topic4Receive: 0
+bi:
+  url: http://172.20.88.43:18080/smartbi
+  account: admin
+  password: admin
+
+uploadPath: C:/boenFile/
+
+
+#动态生成设备ng状态,0开1关
+testNgJob: 1
+checkSizeStatus: 1
+
+#保存状态线程池
+statusPool: 40
+statusMaxPool: 5000
+#状态队列配置
+statusQueue: 500
+#保存尺寸线程池
+sizePool: 40
+sizeMaxPool: 3000
+#尺寸处理队列配置
+sizeQueue: 500
+
+#尺寸发起审批,0开1关.
+sizeCheck: 0
+
+#尺寸发起审批工序配置,ALL为全工序
+sizeCheckProcess: CNC2
+
+
+#RFID请求链接
+#RFIDWaitMaterialURL: http://10.77.31.200/product-resume-biel/
+RFIDWaitMaterialURL: http://127.0.0.1:${server.port}/Test/testMacCode
+
+#防呆时间(秒)
+FoolProofingTime: 900
+
+#尺寸结果是否推送RFID(Y/N)
+isPushSizeResult: Y
+
+#推送尺寸检查结果给RFID Mq通道
+RFIDBadGlassReportTopic: RFIDBadGlassReport
+
+#RFID 服务地址
+#RFIDBadGlassReportURL: http://10.77.31.200/product-resume-biel/jiaTai/open/badGlassReport
+RFIDBadGlassReportURL: http://127.0.0.1:${server.port}/Test/testRfidRISK
+
+#砂轮寿命(换刀)mq
+GrindingLifeTopic: ToolMonitor_Iot_Gather_A_B
+
+
+#ARV位置mq
+ARVPosition: Event_AGV_ARV_Machines_A_B
+
+#AOI 通道
+AOIQueue: Report_ProductGague_A_B
+
+
+#砂轮寿命mq(最新)
+GrindingWheelTopic: ToolEvent_PDA_A_B
+
+
+#AOI图片存放位置
+AOIImgPath: E://ServerFile//AOI
+
+
+#AGV位置请求接口
+#AGVURL: http://10.77.31.220:7000/ics/out/device/list/deviceInfo
+AGVURL: http://127.0.0.1:${server.port}/testAGV/ics/out/device/list/deviceInfo
+
+#AGV控制接口
+#AGVControlURL: http://10.77.31.220:7000/ics/out/controlDevice
+AGVControlURL: http://127.0.0.1:${server.port}/testAGV/ics/out/controlDevice
+
+#AGV报警判定距离(米)
+AGVWarningValue: 5
+
+#AGV报警判定XY轴距离(米)
+AGVWarningXYValue: 2
+
+#AGV区域ID
+AGVAreaId: 2
+
+#AGV锁车 开启Y,关闭N
+AGVLock: N
+
+#保存AGV坐标开启Y,关闭N
+SaveAgvPosition: N
+
+#QMS外观推送到SCADA队列名称
+QmsPutAppearanceData: SIP_ProductGague_J10-1_J10-1-4
+
+#是否开启动态砂轮IPQC 开启Y,关闭N
+ISIPQC: Y
+
+#是否开启动态外观IPQC 开启Y,关闭N
+ISWGIPQC: Y
+
+#是否开启动态尺寸IPQC 开启Y,关闭N
+ISSizeIPQC: Y
+
+#动态ipqc监控机台号
+IPQCMac: all
+
+#动态ipqc监控项目
+IPQCProject: C98B
+
+#动态ipqc监控工序
+IPQCProcess: CNC3
+#动态ipqc砂轮寿命预警值
+IPQCGrindingLife: 5
+
+#动态ipqc CNC3泊松分布
+IPQCCNC3BoSongFenBu: Y
+
+#风险品批次玻璃数量
+RiskLotCount: 21
+
+#动态ipqc机台良率标准值
+IpqcMqcYield: 10
+
+IpqcToolLifeStandard: 200
+
+#动态ipqc收严时间(小时)
+IpqcTimeStandardTighten: 1.5
+
+#动态ipqc正常时间(小时)
+IpqcTimeStandardNormal: 3
+
+#动态ipqc放宽时间阶段一(小时)
+IpqcTimeStandardRelax1: 6
+
+#动态ipqc放宽时间阶段二(小时)
+IpqcTimeStandardRelax2: 12
+
+#RFID获取同批风险码接口
+#RFIDWarmCode: http://10.77.31.200/product-resume-biel/open/vb/queryRelationVb
+RFIDWarmCode: http://127.0.0.1:${server.port}/Test/testVbCode
+
+#scada 砂轮寿命统计报文
+GrindingLifeInfoTopic: ToolMonitor_Iot_Machines_J10-1_J10-1-4
+
+#默认线体
+LineBody: Line-23
+
+#默认项目
+Project: C98B
+
+#查询vb信息接口
+#FindVbCodeAPI: http://192.168.5.17:9001/jiaTai/open/queryVb
+FindVbCodeAPI: http://127.0.0.1:${server.port}/Test/testClampCode
+
+#查询同一个架子vb信息接口
+#FindClampVbCodeAPI: http://10.77.31.200/product-resume-biel/jiaTai/open/queryRelationVb
+FindClampVbCodeAPI: http://127.0.0.1:${server.port}/Test/testClampCode
+
+IsOpenClampAPI: Y
+
+#cnc3下机规定抽检时间(分)
+IPQCCheckTime: 120
+
+#是否打印尺寸原始报文
+LogSizeData: Y
+
+#是否发送动态ipqc机台抽检提醒
+SendDynamicMacCheckMes: Y
+
+#是否发送24盘NG两片预警
+IPQC24PS: Y
+
+#外观良率报警开关Y/N
+WgYieldWarn: Y
+
+#尺寸良率报警开关Y/N
+CcYieldWarn: Y
+#尺寸24片ng2片良率报警开关Y/N
+sizeCheck24Pcs: Y
+
+#尺寸风险拦截工序
+sizeFullCheckProcess: CNC1,CNC2,CNC3
+
+
+#SCADA锁机TOPIC
+SCADALockMac: CMD_Iot_Machines_J10-1_J10-1-4
+
+#RFID解锁接口
+RFIDUnLockURL: CMD_Iot_Machines_J10-1_J10-1-4
+
+#模板文件存放路径
+templateFilePath: D:\\templateFiles\
+

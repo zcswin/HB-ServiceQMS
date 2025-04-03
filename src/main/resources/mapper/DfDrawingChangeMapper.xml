@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfDrawingChangeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfDrawingChange">
+        <id column="id" property="id" />
+        <result column="model" property="model" />
+        <result column="production_stage" property="productionStage" />
+        <result column="flow_id" property="flowId" />
+        <result column="category" property="category" />
+        <result column="drawing_room" property="drawingRoom" />
+        <result column="factory_document_control" property="factoryDocumentControl" />
+        <result column="outer_dfm" property="outerDfm" />
+        <result column="inner_dfm" property="innerDfm" />
+        <result column="bom" property="bom" />
+        <result column="ers" property="ers" />
+        <result column="size_change_list" property="sizeChangeList" />
+        <result column="outer_qcp" property="outerQcp" />
+        <result column="change_area" property="changeArea" />
+        <result column="customer_drawing_name" property="customerDrawingName" />
+        <result column="inner_drawing_name" property="innerDrawingName" />
+        <result column="fei_drawing_name" property="feiDrawingName" />
+        <result column="change_date" property="changeDate" />
+    </resultMap>
+
+</mapper>

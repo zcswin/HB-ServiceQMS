@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfSandBlastMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfSandBlast">
+        <id column="id" property="id" />
+        <result column="machine_id" property="machineId" />
+        <result column="model" property="model" />
+        <result column="sand_mould" property="sandMould" />
+        <result column="sand_id" property="sandId" />
+        <result column="speed" property="speed" />
+        <result column="sand_water_discharge" property="sandWaterDischarge" />
+        <result column="water_addition" property="waterAddition" />
+        <result column="sand_addition_m2" property="sandAdditionM2" />
+        <result column="sand_addition_m3" property="sandAdditionM3" />
+        <result column="m2_before" property="m2Before" />
+        <result column="m2_after" property="m2After" />
+        <result column="m3_before" property="m3Before" />
+        <result column="m3_after" property="m3After" />
+        <result column="m02_p21" property="m02P21" />
+        <result column="m02_p22" property="m02P22" />
+        <result column="m02_p23" property="m02P23" />
+        <result column="m02_p24" property="m02P24" />
+        <result column="m02_p31" property="m02P31" />
+        <result column="m02_p32" property="m02P32" />
+        <result column="m02_p33" property="m02P33" />
+        <result column="m02_p34" property="m02P34" />
+        <result column="m2" property="m2" />
+        <result column="m3" property="m3" />
+        <result column="recorder" property="recorder" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

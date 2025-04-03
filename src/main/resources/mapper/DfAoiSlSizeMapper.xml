@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfAoiSlSizeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfAoiSlSize">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="logo_size" property="logoSize" />
+        <result column="standard" property="standard" />
+        <result column="up" property="up" />
+        <result column="down" property="down" />
+        <result column="status" property="status" />
+        <result column="machine_id" property="machineId" />
+        <result column="color" property="color" />
+        <result column="model" property="model" />
+        <result column="excel_time" property="excelTime" />
+    </resultMap>
+
+</mapper>

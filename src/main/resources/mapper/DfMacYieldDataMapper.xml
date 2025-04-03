@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfMacYieldDataMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfMacYieldData">
+        <id column="id" property="id" />
+        <result column="mac_code" property="macCode" />
+        <result column="produce_real_ok_rate" property="produceRealOkRate" />
+        <result column="produce_target_ok_rate" property="produceTargetOkRate" />
+        <result column="appearance_real_ok_rate" property="appearanceRealOkRate" />
+        <result column="appearance_target_ok_rate" property="appearanceTargetOkRate" />
+        <result column="size_real_ok_rate" property="sizeRealOkRate" />
+        <result column="size_target_ok_rate" property="sizeTargetOkRate" />
+        <result column="ng_rate" property="ngRate" />
+        <result column="ng_type" property="ngType" />
+        <result column="day_or_night" property="dayOrNight" />
+        <result column="process" property="process" />
+        <result column="overkill_rate" property="overkillRate" />
+        <result column="AR" property="ar" />
+        <result column="PR" property="pr" />
+        <result column="QR" property="qr" />
+        <result column="OEE" property="oee" />
+        <result column="crop_rate" property="cropRate" />
+        <result column="achievement_rate" property="achievementRate" />
+        <result column="pass_through_rate" property="passThroughRate" />
+        <result column="undetected_rate" property="undetectedRate" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

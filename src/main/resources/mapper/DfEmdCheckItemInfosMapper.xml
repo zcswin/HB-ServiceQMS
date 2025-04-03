@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ww.boengongye.mapper.DfEmdCheckItemInfosMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ww.boengongye.entity.DfEmdCheckItemInfos">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="check_time" property="checkTime" />
+        <result column="left_sn" property="leftSn" />
+        <result column="left_result" property="leftResult" />
+        <result column="left" property="left" />
+        <result column="left_change" property="leftChange" />
+        <result column="f1" property="f1" />
+        <result column="f2" property="f2" />
+        <result column="f3" property="f3" />
+        <result column="f4" property="f4" />
+        <result column="f5" property="f5" />
+        <result column="f6" property="f6" />
+        <result column="f7" property="f7" />
+        <result column="f8" property="f8" />
+        <result column="f9" property="f9" />
+        <result column="f10" property="f10" />
+        <result column="f11" property="f11" />
+        <result column="f12" property="f12" />
+        <result column="f13" property="f13" />
+        <result column="f14" property="f14" />
+        <result column="f15" property="f15" />
+        <result column="f16" property="f16" />
+        <result column="f17" property="f17" />
+        <result column="f18" property="f18" />
+        <result column="f19" property="f19" />
+        <result column="f20" property="f20" />
+        <result column="f21" property="f21" />
+        <result column="clazz" property="clazz" />
+    </resultMap>
+
+</mapper>
