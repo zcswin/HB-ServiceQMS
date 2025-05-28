@@ -64,6 +64,12 @@ mybatis-plus:
 server:
   port: ${APP_PORT:15005}
 
+springdoc:  
+  api-docs:
+    path: /v3/api-docs # 显式指定网关自身文档路径（已禁用）
+    enabled: true
+    groups:
+        enabled: true
 config:
   factoryId: J10-1
 
